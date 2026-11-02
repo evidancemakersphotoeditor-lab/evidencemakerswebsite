@@ -1,0 +1,5196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F2E9E1">
+  <title>Evidence Makers | Wedding Photography & Films</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+
+  
+  <style>
+
+.wp-block-html:has(.em-fixed-hero) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.em-fixed-hero,
+.em-fixed-hero * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.em-fixed-hero {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  max-width: none;
+
+  height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0px 0px;
+  padding: 0;
+
+  overflow: hidden;
+  background-color: #24211e;
+}
+
+
+/* =========================================
+   SLIDER BACKGROUND
+========================================= */
+
+.em-fixed-hero .em-fixed-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+/* Individual slides */
+
+.em-fixed-hero .em-fixed-hero__slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  opacity: 0;
+  transform: scale(1.035);
+
+  transition:
+    opacity 1.2s ease-in-out,
+    transform 7s ease-out;
+
+  will-change: opacity, transform;
+}
+
+
+/* Active slide */
+
+.em-fixed-hero .em-fixed-hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.em-fixed-hero .em-fixed-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   NAVIGATION ARROWS
+========================================= */
+/* =========================================
+   MINIMAL HERO NAVIGATION ARROWS
+========================================= */
+
+.em-fixed-hero__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  transition: color .3s ease;
+}
+
+/* Arrow positioning */
+.em-fixed-hero__arrow--prev {
+  left: clamp(18px, 3vw, 48px);
+}
+
+.em-fixed-hero__arrow--next {
+  right: clamp(18px, 3vw, 48px);
+}
+
+/* Icon */
+.em-fixed-hero__arrow svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Hover: colour change only */
+.em-fixed-hero__arrow:hover {
+  color: #A77C5B;
+  background: transparent;
+  border: none;
+  transform: translateY(-50%);
+}
+
+
+
+/* Left arrow */
+
+.em-fixed-hero__arrow--prev {
+  left: clamp(18px, 3vw, 48px);
+}
+
+
+/* Right arrow */
+
+.em-fixed-hero__arrow--next {
+  right: clamp(18px, 3vw, 48px);
+}
+
+
+/* Arrow icon */
+
+.em-fixed-hero__arrow svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+
+
+/* Hover */
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .em-fixed-hero {
+    min-height: 600px;
+  }
+
+  .em-fixed-hero .em-fixed-hero__slide {
+    background-position: 79% center;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .em-fixed-hero {
+    margin: -11% 0;
+    padding: 0;
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+
+  .em-fixed-hero .em-fixed-hero__slide {
+    background-position: 95% center;
+  }
+
+  .em-fixed-hero__arrow {
+    width: 39px;
+    height: 39px;
+  }
+
+  .em-fixed-hero__arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .em-fixed-hero__arrow--prev {
+    left: 13px;
+  }
+
+  .em-fixed-hero__arrow--next {
+    right: 13px;
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .em-fixed-hero__slide {
+    transition: none !important;
+    transform: none !important;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .em-fixed-hero__arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .em-fixed-hero__arrow svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .em-fixed-hero__arrow--prev {
+    left: 13px;
+  }
+
+  .em-fixed-hero__arrow--next {
+    right: 13px;
+  }
+}
+
+/* =========================================
+   HERO BOTTOM-CENTRE MOTTO
+========================================= */
+
+.em-fixed-hero__motto {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(28px, 4vh, 48px);
+  z-index: 4;
+
+  width: max-content;
+  max-width: 90%;
+
+  color: #ffffff;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: .025em;
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .2);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .em-fixed-hero__motto {
+    bottom: 70px;
+    font-size: clamp(24px, 10vw, 30px);
+  }
+}
+  </style>
+
+  
+  <style>
+*,*::before,*::after{box-sizing:border-box}
+html{scrollbar-gutter:stable;scroll-behavior:smooth}
+.custom-transparent-header{position:fixed;top:0;left:0;width:100%;height:100px;display:flex;align-items:center;justify-content:center;padding:0 40px;background:transparent;z-index:1000;transition:background-color .4s ease,box-shadow .4s ease}
+.custom-transparent-header a{color:#fff;text-decoration:none;text-transform:uppercase;font-size:13px;font-weight:400;letter-spacing:1.7px;transition:color .3s ease}
+.custom-transparent-header.scrolled{height:100px;background-color:#F2E9E1;box-shadow:0 4px 20px rgba(93,91,92,.12)}
+.custom-transparent-header.scrolled a{color:#5D5B5C}
+.custom-transparent-header.scrolled a:hover{color:#A77C5B}
+.header-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;height:100%;z-index:1011}
+.header-logo img{display:block;width:auto;max-height:70px;object-fit:contain}
+.nav-group{display:flex;align-items:center;gap:clamp(16px,2.2vw,34px);list-style:none;margin:0;padding:0;z-index:5}
+.nav-group-left{margin-right:auto}
+.nav-group-right{margin-left:auto}
+.nav-group a:hover{color:rgba(255,255,255,.7)}
+.custom-transparent-header.scrolled .nav-group a:hover{color:#A77C5B}
+/* Highlighted Let's Talk link */
+.nav-group a.nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border:1px solid rgba(255,255,255,.8);color:#fff;transition:background-color .3s ease,color .3s ease,border-color .3s ease}
+.nav-group a.nav-cta:hover{background:#F2E9E1;border-color:#F2E9E1;color:#5D5B5C}
+.custom-transparent-header.scrolled .nav-group a.nav-cta{border-color:#A77C5B;background:#A77C5B;color:#F2E9E1}
+.custom-transparent-header.scrolled .nav-group a.nav-cta:hover{border-color:#5D5B5C;background:#5D5B5C;color:#F2E9E1}
+.mobile-nav-toggle{display:none;position:absolute;right:20px;top:50%;transform:translateY(-50%);width:42px;height:42px;padding:8px!important;align-items:center;justify-content:center;flex-direction:column;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;cursor:pointer;z-index:1012;appearance:none;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}
+.mobile-nav-toggle:hover,.mobile-nav-toggle:focus,.mobile-nav-toggle:focus-visible,.mobile-nav-toggle:active{background:transparent!important;border:0!important;box-shadow:none!important;outline:none!important}
+.mobile-nav-toggle span{display:block;width:25px;height:2px;margin:3px 0;flex-shrink:0;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease,background-color .3s ease}
+.custom-transparent-header.scrolled .mobile-nav-toggle span,.custom-transparent-header .mobile-nav-toggle.active span{background:#5D5B5C}
+.mobile-nav-toggle.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.mobile-nav-toggle.active span:nth-child(2){opacity:0}
+.mobile-nav-toggle.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.mobile-nav-overlay{display:flex;flex-direction:column;align-items:center;justify-content:center;position:fixed;inset:0;width:100%;height:100vh;height:100dvh;padding:100px 24px 40px;background:#F2E9E1;z-index:1005;overflow-y:auto;overscroll-behavior:contain;transform:translateY(-100%);visibility:hidden;pointer-events:none;transition:transform .4s ease-in-out,visibility .4s ease-in-out}
+.mobile-nav-overlay.active{transform:translateY(0);visibility:visible;pointer-events:auto}
+.mobile-nav-overlay ul{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;list-style:none!important;padding:0!important;margin:0!important;gap:0;text-align:center}
+.mobile-nav-overlay li{display:block;width:100%;list-style:none!important;margin:0!important;padding:0!important}
+.mobile-nav-overlay li a{display:block;width:100%;padding:13px 0;margin:0;font-family:inherit;font-size:clamp(25px,6vw,38px);font-weight:400;letter-spacing:1.8px;line-height:1.3;color:#5D5B5C!important;text-align:center;text-decoration:none;text-transform:uppercase;background:transparent!important;transition:color .25s ease}
+.mobile-nav-overlay li a:hover,.mobile-nav-overlay li a:focus,.mobile-nav-overlay li a:active{color:#A77C5B!important;background:transparent!important}
+.mobile-nav-overlay li a.nav-cta{color:#A77C5B!important;font-weight:500;letter-spacing:2px}
+.mobile-nav-overlay li a.nav-cta:hover{color:#5D5B5C!important}
+/* Keeps anchor destinations visible below the fixed header */
+:where(#home,#about,#our-elegance-works,#wedding-films,#celebrity-clients,#contact){scroll-margin-top:100px}
+@media(max-width:1200px) and (min-width:992px){.custom-transparent-header{padding:0 24px}.nav-group{gap:16px}.custom-transparent-header a{font-size:11px;letter-spacing:1.2px}.header-logo img{max-height:62px}}
+@media(max-width:991px){.custom-transparent-header{height:80px;padding:0 20px;justify-content:center}.custom-transparent-header.scrolled{height:80px;background-color:#F2E9E1!important}.header-logo{left:50%;top:50%;transform:translate(-50%,-50%)}.header-logo img,.custom-transparent-header.scrolled .header-logo img{max-height:55px}.nav-group{display:none}.mobile-nav-toggle{display:flex}.mobile-nav-toggle.active{position:fixed;top:40px;right:20px;transform:translateY(-50%)}:where(#home,#about,#our-elegance-works,#wedding-films,#celebrity-clients,#contact){scroll-margin-top:80px}}
+@media(max-width:480px){.mobile-nav-overlay{padding:85px 20px 30px}.mobile-nav-overlay li a{font-size:clamp(23px,7vw,31px);letter-spacing:1.4px;padding:11px 0}}
+@media(max-height:500px) and (max-width:991px){.mobile-nav-overlay{justify-content:flex-start;padding-top:75px;padding-bottom:20px}.mobile-nav-overlay li a{padding:7px 0;font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.custom-transparent-header,.mobile-nav-toggle span,.mobile-nav-overlay,.mobile-nav-overlay li a{transition:none!important}}
+  </style>
+
+ 
+  <style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; width: 100%; }
+  body { color: #5D5B5C; background: #fff; }
+
+  .em-about-crew {
+    --em-card: #F2E9E1;
+    --em-text: #5D5B5C;
+    --em-ink: #292728;
+    --em-muted: #898285;
+    width: 100%;
+    margin: 0;
+    padding: 54px 0 62px;
+    overflow: hidden;
+    background: #F2E9E1;
+    color: var(--em-text);
+    font-family: 'Bodoni Moda', Georgia, serif;
+  }
+
+  .em-about-crew img,
+  .em-about-crew video { display: block; max-width: 100%; }
+
+  /* Founder introduction */
+  .em-founder {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    padding: 0 3.2%;
+    display: grid;
+    grid-template-columns: minmax(280px, .92fr) minmax(390px, 1.08fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 76px);
+  }
+
+  .em-founder-copy { max-width: 470px; }
+  .em-founder-kicker {
+    display: block;
+    margin: 0 0 16px;
+    color: #9A8B83;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+  .em-founder-copy h1 {
+    margin: 0 0 18px;
+    color: var(--em-ink);
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(34px, 4.2vw, 54px);
+    font-weight: 400;
+    line-height: 1.08;
+  }
+  .em-founder-copy p {
+    margin: 0;
+    color: var(--em-text);
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(17px, 1.55vw, 20px);
+    font-weight: 500;
+    line-height: 1.42;
+  }
+
+  .em-founder-media {
+    display: grid;
+    grid-template-columns: .98fr 1fr;
+    align-items: start;
+    gap: clamp(4px, 1.3vw, 13px);
+    min-width: 0;
+  }
+  .em-founder-frame {
+    position: relative;
+    height: clamp(250px, 31vw, 390px);
+    min-width: 0;
+    overflow: hidden;
+    background: #dedbd8;
+  }
+  .em-founder-frame video,
+  .em-founder-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .em-founder-frame video { position: absolute; inset: 0; }
+  .em-founder-frame:first-child { margin-top: 0; }
+  .em-founder-frame:last-child { margin-top: 0; }
+
+  /* Evidence Crew heading */
+  .em-crew-heading {
+    margin: 42px auto 26px;
+    padding: 0 18px;
+    text-align: center;
+  }
+  .em-crew-heading h2 {
+    margin: 0;
+    color: var(--em-ink);
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+  .em-crew-heading p {
+    max-width: 570px;
+    margin: 10px auto 0;
+    color: var(--em-muted);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Full-width crew film */
+  .em-crew-film {
+    position: relative;
+    width: 100%;
+    height: clamp(230px, 34vw, 410px);
+    overflow: hidden;
+    background: #252323;
+  }
+  .em-crew-film video,
+  .em-crew-film img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .em-crew-film video { z-index: 1; }
+  .em-crew-film::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(0,0,0,.12), transparent 50%, rgba(0,0,0,.12));
+  }
+
+ 
+/* =========================================
+   EVIDENCE CREW — PREMIUM CARD SECTION
+========================================= */
+
+.em-team-area {
+  --em-card: #F2E9E1;
+  --em-text: #5D5B5C;
+  --em-ink: #292728;
+
+  width: 100%;
+  padding: 55px 0 65px;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  color: var(--em-text);
+}
+
+
+/* SECTION HEADER */
+
+.em-team-intro {
+  width: min(1450px, 100%);
+  margin: 0 auto 28px;
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.em-team-intro h3 {
+  margin: 0;
+  color: var(--em-ink);
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(30px, 3.2vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+/* NAVIGATION ARROW */
+
+.em-team-arrow {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid rgba(93, 91, 92, .35);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--em-text);
+  cursor: pointer;
+
+  transition: background .25s ease,
+              color .25s ease,
+              transform .25s ease;
+}
+
+.em-team-arrow:hover {
+  background: var(--em-ink);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.em-team-arrow svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.em-team-arrow:focus-visible {
+  outline: 2px solid var(--em-ink);
+  outline-offset: 4px;
+}
+
+
+/* HORIZONTAL SCROLL CONTAINER */
+
+.em-team-rail {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 0 4% 14px;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c8bbb2 transparent;
+}
+
+.em-team-rail::-webkit-scrollbar {
+  height: 4px;
+}
+
+.em-team-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.em-team-rail::-webkit-scrollbar-thumb {
+  background: #c8bbb2;
+  border-radius: 10px;
+}
+
+
+/* CARD TRACK */
+
+.em-team-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  gap: 12px;
+}
+
+
+/* PREMIUM CARD DIMENSIONS */
+
+.em-team-card {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  gap: 6px;
+
+  width: 430px;
+  min-height: 245px;
+  padding: 11px;
+
+  background: var(--em-card);
+  color: var(--em-text);
+
+  scroll-snap-align: start;
+}
+
+
+/* CREW PHOTOGRAPH */
+
+.em-team-photo {
+  min-width: 0;
+  min-height: 221px;
+  overflow: hidden;
+  background: #d8d1cb;
+}
+
+.em-team-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 221px;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform .6s ease;
+}
+
+@media (hover: hover) {
+  .em-team-card:hover .em-team-photo img {
+    transform: scale(1.04);
+  }
+}
+
+
+/* CARD INFORMATION */
+
+.em-team-info {
+  min-width: 0;
+  padding: 12px 8px 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* ROLE */
+
+.em-team-role {
+  margin: 0 0 10px;
+
+  color: #9A8174;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+
+/* NAME */
+
+.em-team-info h4 {
+  margin: 0 0 12px;
+
+  color: var(--em-ink);
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+
+/* EXPERIENCE */
+
+.em-team-experience {
+  margin: 0 0 10px;
+
+  color: var(--em-text);
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* DESCRIPTION */
+
+.em-team-bio {
+  margin: 0;
+
+  color: #777174;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .em-team-card {
+    width: 640px;
+    min-height: 230px;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .em-team-photo,
+  .em-team-photo img {
+    min-height: 206px;
+  }
+
+  .em-team-info h4 {
+    font-size: 23px;
+  }
+
+  .em-team-bio {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .em-team-area {
+    padding: 38px 0 48px;
+  }
+
+  .em-team-intro {
+    padding: 0 18px;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .em-team-intro h3 {
+    font-size: 27px;
+  }
+
+  .em-team-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .em-team-arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .em-team-rail {
+    padding: 0 14px 12px;
+  }
+
+  .em-team-track {
+    gap: 14px;
+  }
+
+  .em-team-card {
+    width: 610px;
+    min-height: 215px;
+
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 12px;
+
+    padding: 9px;
+  }
+
+  .em-team-photo,
+  .em-team-photo img {
+    min-height: 197px;
+  }
+
+  .em-team-info {
+    padding: 8px 5px 7px 0;
+  }
+
+  .em-team-role {
+    font-size: 9px;
+  }
+
+  .em-team-info h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .em-team-experience {
+    font-size: 10px;
+  }
+
+  .em-team-bio {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .em-team-intro h3 {
+    font-size: 24px;
+  }
+
+  .em-team-card {
+    width: 315px;
+    min-height: 200px;
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .em-team-photo,
+  .em-team-photo img {
+    min-height: 182px;
+  }
+
+  .em-team-info h4 {
+    font-size: 19px;
+  }
+
+  .em-team-bio {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .em-team-rail,
+  .em-team-photo img,
+  .em-team-arrow {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+
+  @media (max-width: 760px) {
+    .em-about-crew { padding: 46px 0 48px; }
+    .em-founder {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 27px;
+      padding: 0 2.5%;
+    }
+    .em-founder-copy { max-width: none; }
+    .em-founder-kicker { margin-bottom: 11px; }
+    .em-founder-copy h1 { font-size: 38px; margin-bottom: 14px; }
+    .em-founder-copy p { font-size: 17px; line-height: 1.42; }
+    .em-founder-media {
+      grid-template-columns: .9fr 1fr;
+      align-items: end;
+      gap: 8px;
+    }
+    .em-founder-frame { height: 242px; }
+    .em-founder-frame:last-child { height: 306px; }
+
+    .em-crew-heading { margin: 24px auto 20px; }
+    .em-crew-heading h2 { font-size: 37px; }
+    .em-crew-heading p { max-width: 330px; font-size: 11px; }
+    .em-crew-film { height: 230px; }
+
+   
+  }
+
+  @media (max-width: 360px) {
+    .em-founder { padding: 0 3%; }
+    .em-founder-copy h1 { font-size: 34px; }
+    .em-founder-copy p { font-size: 16px; }
+    .em-founder-frame { height: 215px; }
+    .em-founder-frame:last-child { height: 270px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .em-about-crew video { display: none; }
+  }
+  
+  
+  
+  .em-team-controls {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex: 0 0 auto;
+  }
+
+  .em-team-arrow {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(93, 91, 92, .35);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--em-text);
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  }
+
+  .em-team-arrow:hover {
+    background: var(--em-ink);
+    border-color: var(--em-ink);
+    color: #fff;
+  }
+
+  .em-team-arrow--prev:hover { transform: translateX(-2px); }
+  .em-team-arrow--next:hover { transform: translateX(2px); }
+
+  .em-team-arrow svg {
+    width: 19px;
+    height: 19px;
+    display: block;
+  }
+
+  .em-team-arrow:focus-visible {
+    outline: 2px solid var(--em-ink);
+    outline-offset: 4px;
+  }
+
+  .em-team-rail {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px clamp(8px, vw, 8px) 4px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .em-team-rail::-webkit-scrollbar { display: none; }
+
+  .em-team-track {
+    display: flex;
+    width: max-content;
+    gap: clamp(1px, .2vw, 24px);
+  }
+
+  .em-team-card {
+    position: relative;
+    flex: 0 0 clamp(280px, 27vw, 360px);
+    width: clamp(280px, 27vw, 360px);
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--em-card);
+    color: #fff;
+    scroll-snap-align: start;
+  }
+
+  .em-team-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #d8d1cb;
+  }
+
+  .em-team-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .7s cubic-bezier(.2,.65,.3,1);
+  }
+
+  .em-team-card:hover .em-team-photo img {
+    transform: scale(1.035);
+  }
+
+  /* Subtle contrast only behind the name and three-line caption */
+  .em-team-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(18, 16, 16, .42) 0%,
+      rgba(18, 16, 16, .08) 24%,
+      rgba(18, 16, 16, .02) 46%,
+      rgba(18, 16, 16, .72) 100%
+    );
+  }
+
+  .em-team-info {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: clamp(18px, 2vw, 27px);
+    min-width: 0;
+    color: #fff;
+  }
+
+  .em-team-info h4 {
+    max-width: 100%;
+    margin: 0;
+    color: #fff;
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(27px, 2.5vw, 36px);
+    font-weight: 400;
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .em-team-bio {
+    display: -webkit-box;
+    max-width: 94%;
+    margin: 0;
+    overflow: hidden;
+    color: rgba(255,255,255,.94);
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(15px, 1.35vw, 18px);
+    font-weight: 400;
+    line-height: 1.42;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  @media (max-width: 760px) {
+    .em-about-crew { padding: 46px 0px 0px 0px; }
+    .em-founder {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 27px;
+      padding: 0 3.5%;
+    }
+    .em-founder-copy { max-width: none; }
+    .em-founder-kicker { margin-bottom: 11px; }
+    .em-founder-copy h1 { font-size: 38px; margin-bottom: 14px; }
+    .em-founder-copy p { font-size: 17px; line-height: 1.42; }
+    .em-founder-media {
+      grid-template-columns: .9fr 1fr;
+      align-items: end;
+      gap: 5px;
+    }
+    .em-founder-frame { height: 242px; }
+    .em-founder-frame:last-child { height: 306px; }
+
+    .em-crew-heading { margin: 24px auto 20px; }
+    .em-crew-heading h2 { font-size: 37px; }
+    .em-crew-heading p { max-width: 330px; font-size: 11px; }
+    .em-crew-film { height: 230px; }
+
+    .em-team-area { padding-top: 32px; }
+    .em-team-intro { padding: 0 18px; margin-bottom: 18px; align-items: center; }
+    .em-team-intro h3 { font-size: 27px; }
+    .em-team-controls { gap: 7px; }
+    .em-team-arrow { width: 38px; height: 38px; }
+    .em-team-arrow svg { width: 17px; height: 17px; }
+    .em-team-rail { padding: 0 8px 12px; }
+    .em-team-track { gap: 2px; }
+    .em-team-card { flex-basis: min(78vw, 330px); width: min(78vw, 330px); aspect-ratio: 3 / 4; }
+    .em-team-info { padding: 18px; }
+    .em-team-info h4 { font-size: clamp(25px, 7vw, 32px); }
+    .em-team-bio { max-width: 100%; font-size: 15px; line-height: 1.4; }
+  }
+
+  @media (max-width: 360px) {
+    .em-founder { padding: 0 7%; }
+    .em-founder-copy h1 { font-size: 34px; }
+    .em-founder-copy p { font-size: 16px; }
+    .em-founder-frame { height: 215px; }
+    .em-founder-frame:last-child { height: 270px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .em-about-crew video { display: none; }
+  }
+  
+  /* CREW CARD RAIL — DESKTOP */
+.em-team-area .em-team-rail {
+  width: 100%;
+  padding: 10px 0 14px clamp(20px, 4vw, 56px);
+  scroll-padding-left: clamp(20px, 4vw, 56px);
+  box-sizing: border-box;
+}
+
+
+
+  </style>
+
+ 
+  <style>
+/* CREW CARD RAIL — MOBILE */
+@media (max-width: 760px) {
+  .em-team-area .em-team-rail {
+    padding: 0 0 12px 18px;
+    scroll-padding-left: 18px;
+  }
+}
+
+
+
+ 
+  
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Allura&display=swap');
+
+.em-about-feature,
+.em-about-feature * {
+  box-sizing: border-box;
+}
+
+.em-about-feature {
+  --em-bg: #F2E9E1;
+  --em-text: #5D5B5C;
+  --em-heading: #494647;
+  --em-accent: #A77C5B;
+  --em-line: rgba(93, 91, 92, .20);
+
+  width: 100%;
+  margin: 0;
+  padding: clamp(56px, 6.5vw, 96px) 5.5%;
+  background: var(--em-bg);
+  color: var(--em-text);
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+/* TOP TITLE */
+.em-about-header {
+  position: relative;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto 46px;
+  padding: 0 0 76px;
+  text-align: center;
+}
+
+.em-about-eyebrow {
+  display: block;
+  margin: 0 0 17px;
+  color: var(--em-accent);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .25em;
+  line-height: 1.5;
+}
+
+.em-about-header h2 {
+  margin: 0;
+  color: var(--em-heading);
+  font-size: clamp(50px, 7vw, 92px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.em-about-header h2 span { font-weight: 400; }
+
+/* CALLIGRAPHIC SUBTITLE */
+.em-about-script {
+  position: absolute;
+  right: 3.5%;
+  bottom: 7px;
+  max-width: 560px;
+  margin: 0;
+  color: var(--em-accent);
+  font-family: 'Allura', cursive;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: right;
+}
+
+/* DESKTOP: METRICS LEFT / TWO IMAGES CENTRE / STORY RIGHT */
+.em-about-composition {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, .9fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(20px, 2.8vw, 42px);
+}
+
+
+/* Keep all 4 metrics side-by-side in one row on desktop */
+.em-about-stats {
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns */
+    gap: 28px; /* Tighter gap between the boxes */
+}
+
+.em-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: clamp(100px, 9vw, 130px);
+    padding: 12px 8px; /* Compact padding to fit all four */
+    background: rgba(93, 91, 92, 0);
+    border-radius: 4px;
+}
+
+.em-stat-number {
+    display: block;
+    margin: 0 0 6px;
+    color: var(--em-accent);
+    font-family: 'Bodoni Moda', Georgia, serif;
+    font-size: clamp(26px, 2.7vw, 40px); /* Scaled down slightly to prevent wrapping */
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.055em;
+    white-space: nowrap;
+}
+
+
+
+.em-stat-value,
+.em-stat-suffix {
+  display: inline;
+}
+
+.em-stat-suffix {
+  margin-left: 1px;
+  font-size: .58em;
+  vertical-align: top;
+}
+
+.em-stat-label {
+  display: block;
+  max-width: 190px;
+  color: var(--em-text);
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(14px, 1.25vw, 18px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* MIDDLE: TWO PORTRAITS */
+.em-about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(8px, 1vw, 15px);
+  width: 100%;
+  min-width: 0;
+}
+
+.em-about-image {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: rgba(93, 91, 92, .12);
+  aspect-ratio: 3 / 4;
+}
+
+.em-about-image-two { margin-top: 42px; }
+
+.em-about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .7s ease;
+}
+
+@media (hover: hover) {
+  .em-about-image:hover img { transform: scale(1.035); }
+}
+
+/* RIGHT: BRAND STORY */
+.em-about-story {
+  min-width: 0;
+  max-width: 590px;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.em-story-eyebrow {
+  display: block;
+  margin: 0 0 15px;
+  color: var(--em-accent);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .22em;
+}
+
+.em-about-story h3 {
+  margin: 0 0 20px;
+  color: var(--em-heading);
+  font-size: clamp(27px, 2.65vw, 41px);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -.025em;
+}
+
+.em-about-story h3 i {
+  color: var(--em-accent);
+  font-weight: 400;
+}
+
+.em-story-copy { width: 100%; }
+
+.em-story-copy p {
+  margin: 0 0 14px;
+  color: var(--em-text);
+  font-size: clamp(12px, .98vw, 14px);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.em-story-copy p:last-child { margin-bottom: 0; }
+
+.em-about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 0 0 8px;
+  border: 0;
+  border-bottom: 1px solid var(--em-line);
+  color: var(--em-heading);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-decoration: none;
+  transition: gap .3s ease, color .3s ease;
+}
+
+/* MOBILE: FOUR METRICS IN ONE ROW → TWO IMAGES → STORY */
+@media (max-width: 700px) {
+  .em-about-feature { padding: 46px 18px 52px; }
+
+  .em-about-header {
+    margin-bottom: 22px;
+    padding-bottom: 65px;
+  }
+
+  .em-about-eyebrow { font-size: 9px; margin-bottom: 13px; }
+  .em-about-header h2 { font-size: clamp(46px, 11vw, 64px); }
+
+  .em-about-script {
+    right: 0;
+    bottom: -7px;
+    max-width: 94%;
+    font-size: clamp(25px, 6.5vw, 33px);
+  }
+
+  .em-about-composition {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  /* All four metrics stay visible together across the full width. */
+  .em-about-stats {
+    order: 1;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 0;
+    border: 0;
+  }
+
+  .em-stat {
+    min-height: 0;
+    padding: 14px 3px 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 0;
+    border: 0;
+  }
+
+
+  .em-stat-number {
+    margin-bottom: 7px;
+    font-size: clamp(22px, 6vw, 32px);
+    line-height: 1;
+    letter-spacing: -.06em;
+  }
+
+  .em-stat-label {
+    max-width: none;
+    font-size: clamp(9px, 2.6vw, 11.5px);
+    line-height: 1.3;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Two images stay side by side. */
+  .em-about-gallery {
+    order: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .em-about-image { aspect-ratio: 3 / 4; }
+  .em-about-image-two { margin-top: 0; }
+
+  .em-about-story {
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+
+  .em-story-eyebrow { font-size: 9px; margin-bottom: 12px; }
+
+  .em-about-story h3 {
+    font-size: clamp(32px, 8vw, 43px);
+    margin-bottom: 16px;
+  }
+
+  .em-story-copy p {
+    font-size: 15px;
+    line-height: 1.78;
+    margin-bottom: 14px;
+  }
+
+  .em-about-link { margin-top: 19px; }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+  .em-about-feature { padding-left: 15px; padding-right: 15px; }
+  .em-about-header h2 { font-size: 44px; }
+  .em-about-script { font-size: 24px; }
+
+  .em-stat { padding-left: 2px; padding-right: 2px; }
+  .em-stat-number { font-size: clamp(19px, 6vw, 23px); }
+  .em-stat-label { font-size: 8.5px; line-height: 1.25; }
+
+  .em-about-gallery { gap: 8px; }
+  .em-about-story h3 { font-size: 30px; }
+  .em-story-copy p { font-size: 14px; }
+}
+
+
+/* =========================================
+   WHY US — RESPONSIVE TABLET LAYOUT
+   Full-width composition; no stat borders
+========================================= */
+
+/* Small laptops / landscape tablets */
+@media (max-width: 1091px) and (min-width: 851px) {
+  .em-about-feature {
+    width: 100%;
+    max-width: none;
+    padding-left: clamp(24px, 4vw, 56px);
+    padding-right: clamp(24px, 4vw, 56px);
+  }
+
+  .em-about-composition {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, .9fr);
+    align-items: start;
+    gap: 34px 28px;
+  }
+
+  .em-about-stats {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 28px);
+    align-self: start;
+  }
+
+  .em-stat {
+    min-width: 0;
+    min-height: 0;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .em-stat-number {
+    font-size: clamp(30px, 4vw, 46px);
+    white-space: nowrap;
+  }
+
+  .em-stat-label {
+    max-width: 160px;
+    font-size: clamp(12px, 1.2vw, 15px);
+    line-height: 1.4;
+  }
+
+  .em-about-gallery {
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+    align-self: start;
+    gap: 12px;
+  }
+
+  .em-about-image-two { margin-top: 28px; }
+
+  .em-about-story {
+    grid-column: 2;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    justify-self: stretch;
+    align-self: start;
+  }
+
+  .em-about-story h3 {
+    font-size: clamp(27px, 3vw, 38px);
+  }
+
+  .em-story-copy p {
+    font-size: clamp(12px, 1.15vw, 14px);
+    line-height: 1.7;
+  }
+}
+
+/* Narrow tablets */
+@media (max-width: 850px) and (min-width: 701px) {
+  .em-about-feature {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .em-about-composition {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .em-about-stats {
+    grid-column: 1;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .em-stat {
+    align-items: flex-start;
+    padding: 8px 0;
+    border: 0;
+  }
+
+  .em-stat-number {
+    font-size: clamp(25px, 4.5vw, 36px);
+  }
+
+  .em-stat-label {
+    font-size: clamp(11px, 1.6vw, 13px);
+  }
+
+  .em-about-gallery {
+    grid-column: 1;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .em-about-image-two { margin-top: 0; }
+
+  .em-about-story {
+    grid-column: 1;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Mobile: keep the four metrics in one row without borders */
+@media (max-width: 700px) {
+  .em-about-feature {
+    width: 100%;
+    max-width: none;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .em-about-composition {
+    width: 100%;
+    max-width: none;
+  }
+
+  .em-about-stats,
+  .em-stat,
+  .em-stat:last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .em-about-image img,
+  .em-about-link { transition: none; }
+}
+
+
+  </style>
+
+  <style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; width: 100%; }
+  body { background: #F2E9E1; color: #5D5B5C; }
+
+  .em-portfolio-categories {
+    --em-portfolio-ink: #5D5B5C;
+    --em-portfolio-arrow: #B8ADA5;
+    --em-portfolio-gap: 2px;
+    width: 100%;
+    margin:  0;
+    padding: 18px 0 42px;
+    overflow: hidden;
+    background: #F2E9E1;
+    color: var(--em-portfolio-ink);
+    font-family: 'Bodoni Moda', 'Times New Roman', serif;
+  }
+
+  .em-category {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+  .em-category:last-child { margin-bottom: 0; }
+
+  .em-category-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 34px;
+    margin: 0 12px 7px;
+  }
+
+  .em-category-heading h2 {
+    margin: 0;
+    color: var(--em-portfolio-ink);
+    font-family: 'Bodoni Moda', 'Times New Roman', serif;
+    font-size: clamp(23px, 2.7vw, 30px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+    text-transform: uppercase;
+  }
+
+  .em-category-link {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 28px;
+    color: var(--em-portfolio-arrow);
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+  }
+  .em-category-link:hover {
+    color: var(--em-portfolio-ink);
+    transform: translateX(4px);
+  }
+  .em-category-link svg {
+    display: block;
+    width: 32px;
+    height: 20px;
+  }
+  .em-category-link:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  /* Horizontal gallery: four panels visible on desktop. */
+  .em-category-rail {
+    width: 100%;
+    margin: 0;
+    padding: 0 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .em-category-rail::-webkit-scrollbar { display: none; }
+
+  .em-category-track {
+    display: flex;
+    width: max-content;
+    gap: var(--em-portfolio-gap);
+  }
+
+  .em-gallery-card {
+    position: relative;
+    display: block;
+    flex: 0 0 calc((100vw - 30px) / 4);
+    width: calc((100vw - 30px) / 4);
+    aspect-ratio: 0.70;
+    overflow: hidden;
+    background: #E2D7CF;
+    scroll-snap-align: start;
+  }
+
+  .em-gallery-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .7s cubic-bezier(.2,.65,.25,1);
+  }
+  .em-gallery-card:hover img { transform: scale(1.035); }
+
+  @media (max-width: 600px) {
+    .em-portfolio-categories { padding: 14px 0px 0px 6px; }
+    .em-category { margin-bottom: 12px; }
+    .em-category-heading {
+      min-height: 24px;
+      gap: 8px;
+      margin: 0 5px 5px;
+    }
+    .em-category-heading h2 {
+      font-size: 16px;
+      letter-spacing: -.025em;
+      line-height: 1.2;
+    }
+    .em-category-link {
+      width: 29px;
+      height: 22px;
+    }
+    .em-category-link svg { width: 28px; height: 17px; }
+    .em-category-rail { padding: 0 12px; }
+    .em-gallery-card {
+      flex-basis: 215px;
+      width: 215px;
+      aspect-ratio: 0.70;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .em-category-rail { scroll-behavior: auto; }
+    .em-gallery-card img,
+    .em-category-link { transition: none; }
+  }
+  
+  
+    /* video css settings */
+  
+ .em-video-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    background: #000;
+    isolation: isolate;
+  }
+  .em-video-poster {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .28s ease;
+  }
+  .em-video-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .em-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 54px;
+    background: rgba(0,0,0,.58);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .em-play-icon svg { width: 25px; height: 25px; }
+  .em-video-card:hover .em-play-icon {
+    background: rgba(0,0,0,.82);
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+  .em-video-card iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 1;
+  }
+  .em-video-card.is-playing .em-video-poster {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Desktop-only audio toggle. Hidden on phones and touch-first devices. */
+  .em-audio-toggle {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0,0,0,.62);
+    border: 1px solid rgba(255,255,255,.42);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .em-video-card.is-playing .em-audio-toggle { display: flex; }
+  .em-audio-toggle:hover { background: rgba(0,0,0,.88); }
+  .em-audio-toggle svg { width: 19px; height: 19px; }
+
+  /* Arrows are positioned on the complete Celebrity Clients gallery layer,
+     independently of the first (video) card. */
+  .em-category--celebrity .em-celebrity-gallery {
+    position: relative;
+    width: 100%;
+  }
+  .em-category--celebrity .em-video-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0,0,0,.42);
+    border: 1px solid rgba(255,255,255,.58);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity .2s ease, background .2s ease;
+  }
+  .em-category--celebrity .em-video-nav--prev { left: 18px; }
+  .em-category--celebrity .em-video-nav--next { right: 18px; }
+  .em-category--celebrity .em-video-nav svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+  }
+  .em-category--celebrity:hover .em-video-nav,
+  .em-category--celebrity:focus-within .em-video-nav { opacity: 1; }
+  .em-category--celebrity .em-video-nav:hover { background: rgba(0,0,0,.82); }
+
+  .em-celebrity-heading-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+  .em-celebrity-autoplay {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--em-portfolio-ink);
+    background: transparent;
+    border: 1px solid rgba(93,91,92,.28);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .em-celebrity-autoplay svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .em-autoplay-play-icon { display: none; }
+  .em-celebrity-autoplay[aria-pressed="false"] .em-autoplay-pause-icon { display: none; }
+  .em-celebrity-autoplay[aria-pressed="false"] .em-autoplay-play-icon { display: block; }
+
+  @media (hover: none), (max-width: 768px) {
+    .em-audio-toggle { display: none !important; }
+    .em-category--celebrity .em-video-nav { opacity: 1; width: 38px; height: 38px; }
+    .em-category--celebrity .em-video-nav--prev { left: 8px; }
+    .em-category--celebrity .em-video-nav--next { right: 8px; }
+  }
+  @media (max-width: 600px) {
+    .em-celebrity-heading-controls { gap: 7px; }
+    .em-celebrity-autoplay { width: 27px; height: 27px; }
+    .em-category--celebrity .em-video-nav { width: 34px; height: 34px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .em-video-poster, .em-play-icon, .em-video-nav { transition: none; }
+  }
+
+  </style>
+
+
+  <style>
+/* ========================================
+   EVIDENCE MAKERS — TESTIMONIALS
+======================================== */
+
+.em-reviews,
+.em-reviews * {
+    box-sizing: border-box;
+}
+
+.em-reviews {
+    --panel: #eeece9;
+    --ink: #403f3b;
+    --muted: #66645f;
+    --line: rgba(64, 63, 59, 0.14);
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0; /* Keep the outer section flush to both edges. */
+
+    /* Converted #eeece9 (RGB: 238, 236, 233) with 50% opacity */
+    background: rgba(238, 236, 233, 0.6);
+    color: var(--ink);
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* HEADER — CENTERED TITLE, ARROWS AT TOP */
+/* TITLE + ARROWS HEADER (Aligned Left) */
+.em-reviews__header {
+    display: flex;
+    justify-content: space-between; /* Pushes title to the left, arrows to the right */
+    align-items: center;
+    width: auto;
+    margin: 0 clamp(20px, 5.5vw, 84px) 38px;
+    padding: 34px 0 0;
+    position: relative;
+}
+
+.em-reviews__eyebrow {
+    margin: 0;
+    text-align: left; /* Align title text to the left */
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(23px, 2.2vw, 30px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* NAVIGATION ARROWS (Keeps them nicely positioned on the right) */
+.em-reviews__controls {
+    position: static; /* Removes absolute positioning so it flows naturally in flex */
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.em-reviews__arrow {
+    display: grid;
+    place-items: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background: #ffffff;
+    color: var(--ink);
+    border: 1px solid rgba(64, 63, 59, 0.10);
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: background .25s ease,
+                color .25s ease,
+                transform .25s ease;
+}
+
+.em-reviews__arrow:hover {
+    background: var(--ink);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.em-reviews__arrow:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 4px;
+}
+
+.em-reviews__arrow svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+
+/* THREE-COLUMN GRID */
+
+.em-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    column-gap: clamp(28px, 5vw, 76px);
+    row-gap: 48px;
+    width: 100%;
+    padding: 0 clamp(20px, 5.5vw, 84px);
+}
+
+/* TESTIMONIAL CARD */
+
+.em-review {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    min-width: 0;
+    min-height: 300px;
+    height: 100%;
+    padding: 8px 14px 20px;
+}
+
+/* COMPLETE REVIEW — NO TEXT CLAMPING */
+
+.em-review__text {
+    display: block;
+    margin: 0;
+    padding: 0 2px;
+
+    color: var(--muted);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(18px, 1.35vw, 21px);
+    font-weight: 400;
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+/* STAR RATINGS */
+
+.em-review__rating {
+    margin-top: 18px;
+    color: #8b7956;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+/* AUTHOR PINNED TO CARD BOTTOM */
+
+.em-review__footer {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+.em-review__name {
+    margin: 0;
+
+    color: var(--ink);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    overflow-wrap: anywhere;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .em-reviews__header {
+        margin-bottom: 42px;
+    }
+
+    .em-reviews__grid {
+        column-gap: 28px;
+        row-gap: 40px;
+    }
+
+    .em-review {
+        min-height: 320px;
+    }
+
+    .em-review__text {
+        font-size: 18px;
+    }
+
+    .em-review__name {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .em-reviews__header {
+        min-height: 40px;
+        margin-bottom: 34px;
+    }
+
+    .em-reviews__eyebrow {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .em-reviews__controls {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .em-reviews__header {
+        justify-content: space-between;
+    }
+
+    .em-reviews__arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .em-reviews__arrow svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .em-reviews__grid {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0;
+    }
+
+    .em-review {
+        min-height: 0;
+        height: auto;
+        padding: 0 0 28px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .em-review:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .em-review__text {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+
+    .em-review__rating {
+        margin-top: 16px;
+    }
+
+    .em-review__footer {
+        padding-top: 22px;
+    }
+
+    .em-review__name {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+/* ========================================
+   TWO DIRECT-CDN VIDEO LAYERS — 16:9
+======================================== */
+
+.em-reviews__videos {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(2px, .1vw, 2px);
+    width: 100%;
+    margin: 44px 0 0;
+    padding: 0 clamp(10px, 1.5vw, 14px) 48px;
+}
+
+.em-reviews__video-item {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.em-direct-video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    isolation: isolate;
+}
+
+.em-hosted-video {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+    pointer-events: none;
+}
+
+.em-video-control-badge {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    background: rgba(0,0,0,.58);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.em-video-control-badge:hover {
+    background: rgba(0,0,0,.82);
+    transform: scale(1.05);
+}
+
+.em-video-control-badge:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.em-video-control-badge svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 700px) {
+    .em-reviews__header {
+        margin: 0 20px 30px;
+        padding-top: 28px;
+    }
+
+    .em-reviews__grid {
+        padding: 0 20px;
+    }
+
+    .em-review {
+        padding: 4px 8px 26px;
+    }
+
+    .em-review__text {
+        padding: 0;
+    }
+
+    .em-reviews__videos {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 30px;
+        padding: 0 20px 34px;
+    }
+
+    .em-reviews__video-item {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .em-video-control-badge {
+        right: 12px;
+        bottom: 12px;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .em-reviews * {
+        transition: none !important;
+    }
+}
+  </style>
+
+  
+  <style>
+* { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; width: 100%; }
+    body { background: #F2E9E1; color: #5D5B5C; font-family: 'Bodoni Moda', Georgia, serif; }
+
+    .em-consultation {
+      --em-bg: #F2E9E1;
+      --em-text: #5D5B5C;
+      --em-soft-text: rgba(93, 91, 92, .78);
+      --em-line: rgba(93, 91, 92, .22);
+      width: 100%;
+      margin: 0;
+      padding: clamp(42px, 6vw, 84px) 0;
+      background: var(--em-bg);
+      color: var(--em-text);
+      font-family: 'Bodoni Moda', Georgia, serif;
+    }
+
+    .em-consultation *,
+    .em-consultation *::before,
+    .em-consultation *::after { box-sizing: border-box; }
+
+    .em-consultation__inner {
+      width: min(1320px, 100%);
+      margin: 0 auto;
+      padding: 0 clamp(22px, 4.2vw, 64px);
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr);
+      align-items: center;
+      gap: clamp(38px, 6vw, 96px);
+    }
+
+    /* LEFT: THE INVITATION */
+    .em-consultation__copy { max-width: 540px; }
+
+    .em-consultation__eyebrow {
+      display: block;
+      margin: 0 0 28px;
+      color: var(--em-soft-text);
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: .035em;
+    }
+
+    .em-consultation__title {
+      max-width: 560px;
+      margin: 0 0 22px;
+      color: var(--em-text);
+      font-size: clamp(36px, 4.1vw, 58px);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -.025em;
+    }
+
+    .em-consultation__description {
+      max-width: 520px;
+      margin: 0;
+      color: var(--em-soft-text);
+      font-size: clamp(17px, 1.45vw, 21px);
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .em-consultation__points {
+      display: grid;
+      gap: 17px;
+      margin: 34px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .em-consultation__points li {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      align-items: start;
+      gap: 11px;
+      color: var(--em-text);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .em-consultation__check {
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+      display: block;
+      color: var(--em-text);
+    }
+
+    .em-consultation__note {
+      margin: 34px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--em-line);
+      color: var(--em-soft-text);
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* RIGHT: BOOKING PANEL */
+    .em-consultation__booking {
+      min-width: 0;
+      padding: clamp(24px, 3vw, 42px);
+      background: rgba(255, 255, 255, .34);
+      border: 1px solid var(--em-line);
+    }
+
+    .em-consultation__booking-title {
+      margin: 0 0 8px;
+      color: var(--em-text);
+      font-size: clamp(27px, 2.5vw, 35px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .em-consultation__booking-description {
+      max-width: 480px;
+      margin: 0 0 22px;
+      color: var(--em-soft-text);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .em-consultation__calendar {
+      width: 100%;
+      min-height: 650px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(93, 91, 92, .13);
+    }
+
+    #em-cal-inline {
+      width: 100%;
+      height: 650px;
+      min-height: 650px;
+      overflow: auto;
+    }
+
+    .em-consultation__fallback {
+      padding: 18px 4px 0;
+      color: var(--em-soft-text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .em-consultation__fallback a {
+      color: var(--em-text);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .em-consultation__inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+      }
+      .em-consultation__copy { max-width: 680px; }
+      .em-consultation__booking { width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .em-consultation { padding: 42px 0; }
+      .em-consultation__inner { padding: 0 18px; gap: 30px; }
+      .em-consultation__eyebrow { margin-bottom: 17px; }
+      .em-consultation__title { font-size: clamp(34px, 10vw, 46px); }
+      .em-consultation__description { font-size: 17px; line-height: 1.58; }
+      .em-consultation__points { gap: 13px; margin-top: 25px; }
+      .em-consultation__points li { font-size: 15px; }
+      .em-consultation__note { margin-top: 25px; }
+      .em-consultation__booking { padding: 20px 14px 14px; }
+      .em-consultation__booking-title { font-size: 28px; }
+      .em-consultation__booking-description { font-size: 14px; }
+      .em-consultation__calendar,
+      #em-cal-inline { min-height: 680px; height: 680px; }
+    }
+  </style>
+  
+  
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap');
+
+.em-celebrity,
+.em-celebrity *,
+.em-celebrity__dialog,
+.em-celebrity__dialog * {
+  box-sizing: border-box;
+}
+
+.em-celebrity {
+  --em-bg: #F2E9E1;
+  --em-ink: #5D5B5C;
+  --em-accent: #A77C5B;
+  --em-gap: 2px;
+
+  width: 100%;
+  margin: 0;
+  padding: 28px 0 42px;
+  overflow: hidden;
+  background: var(--em-bg);
+  color: var(--em-ink);
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+.em-celebrity__heading {
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+  margin: 0 12px 10px;
+}
+
+/* No arrow or navigation control beside the heading. */
+.em-celebrity__heading h2 {
+  margin: 0;
+  color: var(--em-ink);
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(23px, 2.7vw, 30px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+
+.em-celebrity__carousel {
+  position: relative;
+  width: 100%;
+}
+
+.em-celebrity__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #fff;
+  background: rgba(35, 31, 29, .68);
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background .2s ease, opacity .2s ease, transform .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.em-celebrity__nav:hover:not(:disabled) {
+  background: rgba(35, 31, 29, .92);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.em-celebrity__nav:disabled {
+  opacity: .28;
+  cursor: default;
+}
+
+.em-celebrity__nav svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.em-celebrity__nav--prev { left: 20px; }
+.em-celebrity__nav--next { right: 20px; }
+
+.em-celebrity__nav:focus-visible {
+  outline: 2px solid var(--em-accent);
+  outline-offset: 4px;
+}
+
+.em-celebrity__rail {
+  width: 100%;
+  margin: 0;
+  padding: 0 12px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.em-celebrity__rail::-webkit-scrollbar {
+  display: none;
+}
+
+.em-celebrity__track {
+  display: flex;
+  width: max-content;
+  gap: var(--em-gap);
+}
+
+.em-celebrity__card {
+  position: relative;
+  flex: 0 0 calc((100vw - 30px) / 4);
+  width: calc((100vw - 30px) / 4);
+  aspect-ratio: .70;
+  overflow: hidden;
+  background: #D8CEC6;
+  scroll-snap-align: start;
+}
+
+.em-celebrity__card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .7s cubic-bezier(.2,.65,.25,1);
+}
+
+@media (hover: hover) {
+  .em-celebrity__card:hover > img {
+    transform: scale(1.04);
+  }
+}
+
+.em-celebrity__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  padding: 0 0 0 3px;
+  color: #fff;
+  background: rgba(0,0,0,.58);
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: background .2s ease, transform .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.em-celebrity__play:hover {
+  background: rgba(0,0,0,.86);
+  transform: translate(-50%, -50%) scale(1.07);
+}
+
+.em-celebrity__play svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.em-celebrity__play:focus-visible,
+.em-celebrity__close:focus-visible {
+  outline: 2px solid var(--em-accent);
+  outline-offset: 4px;
+}
+
+/* Modal player */
+.em-celebrity__dialog {
+  position: fixed;
+  inset: 0;
+  width: min(1100px, calc(100% - 36px));
+  max-width: none;
+  max-height: none;
+  height: fit-content;
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  color: #fff;
+  background: transparent;
+  border: 0;
+}
+
+.em-celebrity__dialog::backdrop {
+  background: rgba(15, 13, 12, .88);
+  backdrop-filter: blur(5px);
+}
+
+.em-celebrity__dialog-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 48px;
+}
+
+.em-celebrity__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.em-celebrity__close:hover {
+  background: rgba(255,255,255,.25);
+  transform: rotate(90deg);
+}
+
+.em-celebrity__close svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+}
+
+
+
+/* Clipped layout to push native top title/avatar overlays out of view */
+.em-celebrity__player iframe {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .em-celebrity__card {
+    flex-basis: 31vw;
+    width: 31vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .em-celebrity {
+    padding: 18px 0 28px;
+  }
+
+  .em-celebrity__heading {
+    min-height: 24px;
+    margin: 0 12px 8px;
+  }
+
+  .em-celebrity__heading h2 {
+    font-size: 18px;
+    letter-spacing: -.025em;
+  }
+
+  .em-celebrity__rail {
+    padding: 0 12px 8px;
+  }
+
+  .em-celebrity__nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .em-celebrity__nav--prev { left: 16px; }
+  .em-celebrity__nav--next { right: 16px; }
+
+  .em-celebrity__card {
+    flex-basis: 215px;
+    width: 215px;
+  }
+
+  .em-celebrity__play {
+    width: 52px;
+    height: 52px;
+  }
+
+  .em-celebrity__dialog {
+    width: calc(100% - 24px);
+  }
+
+  .em-celebrity__dialog-inner {
+    padding-top: 48px;
+  }
+
+  .em-celebrity__close {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .em-celebrity__rail,
+  .em-celebrity__card > img,
+  .em-celebrity__play,
+  .em-celebrity__close,
+  .em-celebrity__nav {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+
+/* SHARED CAROUSEL ARROWS */
+
+.em-rail-controls,
+.em-team-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.em-rail-arrow,
+.em-team-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(93, 91, 92, .35);
+  border-radius: 50%;
+  background: transparent;
+  color: #5D5B5C;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease,
+              border-color .25s ease, transform .25s ease;
+}
+
+.em-rail-arrow svg,
+.em-team-arrow svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.em-rail-arrow:hover,
+.em-team-arrow:hover {
+  background: #5D5B5C;
+  border-color: #5D5B5C;
+  color: #fff;
+}
+
+.em-rail-arrow:disabled,
+.em-team-arrow:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.em-rail-arrow:focus-visible,
+.em-team-arrow:focus-visible {
+  outline: 2px solid #A77C5B;
+  outline-offset: 4px;
+}
+
+/* Category heading layout */
+.em-category-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.em-category-heading h2 {
+  margin-right: auto;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .em-rail-controls,
+  .em-team-controls {
+    gap: 6px;
+  }
+
+  .em-rail-arrow,
+  .em-team-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .em-rail-arrow svg,
+  .em-team-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+
+</style>
+
+<style>
+.em-category-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.em-category-heading h2 {
+  margin-right: auto;
+}
+
+.em-category-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.em-category-arrow {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(93, 91, 92, .35);
+  border-radius: 50%;
+  background: transparent;
+  color: #5D5B5C;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.em-category-arrow svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.em-category-arrow:hover:not(:disabled) {
+  background: #5D5B5C;
+  border-color: #5D5B5C;
+  color: #fff;
+}
+
+.em-category-arrow:disabled,
+.em-celebrity__nav:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.em-category-arrow:focus-visible {
+  outline: 2px solid #A77C5B;
+  outline-offset: 4px;
+}
+
+@media(max-width:600px) {
+  .em-category-controls {
+    gap: 5px;
+  }
+
+  .em-category-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .em-category-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.em-celebrity__player {
+    position: relative;
+    width: 100%;
+    max-width: 420px;       /* Controls the portrait width on desktop */
+    height: 75vh;           /* Restricts height relative to the viewport */
+    max-height: 740px;      /* Caps the maximum height */
+    margin: 0 auto;         /* Centers the player horizontally */
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    border-radius: 12px;    /* Optional: adds a smooth modern curve */
+}
+
+.em-celebrity__player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.em-elegance {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.em-elegance h2 {
+  margin: 0;
+  padding: 0;
+  color: #A77C5B;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .em-elegance {
+    padding: 30px 16px;
+  }
+
+  .em-elegance h2 {
+    font-size: 28px;
+    letter-spacing: 0.05em;
+  }
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+
+
+<!-- ================= HERO SLIDER ================= -->
+<section class="em-fixed-hero" aria-label="Evidence Makers wedding photography">
+  <div class="em-fixed-hero__background" aria-hidden="true">
+
+    <!-- SLIDE 01: EXISTING IMAGE -->
+    <div
+      class="em-fixed-hero__slide is-active"
+      style="--hero-image: url('assets/homepage/heroslider1.jpg')"
+      aria-hidden="false">
+    </div>
+
+    <!-- SLIDE 02: REPLACE IMAGE URL -->
+    <div
+      class="em-fixed-hero__slide"
+      style="--hero-image: url('/assets/homepage/slider2.jpg')"
+      aria-hidden="true">
+    </div>
+
+    <!-- SLIDE 03: REPLACE IMAGE URL -->
+    <div
+      class="em-fixed-hero__slide"
+      style="--hero-image: url('assets/homepage/heroslider1.jpg')"
+      aria-hidden="true">
+    </div>
+
+  </div>
+
+  <div class="em-fixed-hero__overlay" aria-hidden="true"></div>
+<!-- BOTTOM CENTRE BRAND MOTTO -->
+<div class="em-fixed-hero__motto">
+  Evidence stories
+</div>
+  <!-- PREVIOUS ARROW -->
+  <button
+    class="em-fixed-hero__arrow em-fixed-hero__arrow--prev"
+    type="button"
+    aria-label="Previous image">
+
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M15 18L9 12L15 6"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+
+  </button>
+
+  <!-- NEXT ARROW -->
+  <button
+    class="em-fixed-hero__arrow em-fixed-hero__arrow--next"
+    type="button"
+    aria-label="Next image">
+
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M9 18L15 12L9 6"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+
+  </button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= SITE HEADER ================= -->
+<header class="custom-transparent-header" id="site-header">
+  <a href="#home" class="header-logo" aria-label="Evidence Makers home"><img src="assets/evidencelogo.png" alt="Evidence Makers Logo"></a>
+  <ul class="nav-group nav-group-left">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About us</a></li>
+    <li><a href="#our-elegance-works">Our Elegance Works</a></li>
+  </ul>
+  <ul class="nav-group nav-group-right">
+    <li><a href="#wedding-films">Wedding Films</a></li>
+    <li><a href="#celebrity-clients">Celebrity Clients</a></li>
+    <li><a class="nav-cta" href="#contact">Let's Talk</a></li>
+  </ul>
+  <button class="mobile-nav-toggle" id="mobile-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-overlay" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="mobile-nav-overlay" id="mobile-overlay" aria-label="Mobile navigation" aria-hidden="true" inert>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#our-elegance-works">Our Elegance Works</a></li>
+      <li><a href="#wedding-films">Wedding Films</a></li>
+      <li><a href="#celebrity-clients">Celebrity Clients</a></li>
+      <li><a class="nav-cta" href="#contact">Let's Talk</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= ABOUT / FOUNDER / CREW ================= -->
+<section class="em-about-crew">
+
+  <!-- FOUNDER INTRO: TEXT + IMAGE + VIDEO -->
+  <div class="em-founder">
+    <div class="em-founder-copy">
+      <span class="em-founder-kicker">THE PERSON BEHIND THE LENS</span>
+      <h1>Sathish</h1>
+      <p>
+        Sathish, the founder and lead photographer of Evidence Makers, has been pursuing his passion for photography since 2018. With experience in celebrity and fashion photography, he brings a distinctive creative vision, a keen eye for detail, and a deep appreciation for visual storytelling. His ability to capture genuine expressions, emotions, and meaningful moments shapes his approach to wedding photography. For Sathish, every wedding is a unique story, and his passion lies in transforming those fleeting moments into timeless photographs that couples can cherish for a lifetime.
+      </p>
+    </div>
+
+    <div class="em-founder-media">
+      <div class="em-founder-frame">
+        <img
+          src="YOUR-SATHISH-PORTRAIT-IMAGE-URL.jpg"
+          alt="Sathish, founder and lead photographer of Evidence Makers"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+      </div>
+
+      <div class="em-founder-frame">
+        <video
+          class="em-autoplay-video"
+          muted loop playsinline preload="none"
+          poster="YOUR-SATHISH-VIDEO-POSTER-IMAGE-URL.jpg"
+          aria-label="Behind the scenes with Sathish"
+        >
+          <source src="YOUR-SATHISH-BEHIND-THE-SCENES-VIDEO-URL.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREW HEADING -->
+  <div class="em-crew-heading">
+    <h2>Evidence Crew</h2>
+   
+  </div>
+
+  <!-- FULL-WIDTH CREW VIDEO -->
+  <div class="em-crew-film">
+    <video
+      class="em-autoplay-video"
+      muted loop playsinline preload="none"
+      poster="YOUR-EVIDENCE-CREW-VIDEO-POSTER.jpg"
+      aria-label="Behind the scenes with the Evidence Makers crew"
+    >
+      <source src="YOUR-EVIDENCE-CREW-VIDEO-URL.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- CREW MEMBER CARDS -->
+  <div class="em-team-area">
+    <div class="em-team-intro">
+      <h3>The people behind every frame</h3>
+      <button class="em-team-arrow" type="button" aria-label="Scroll to the next crew members" title="Next crew members">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4.5 12H19.5M13 5.5L19.5 12L13 18.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+
+    
+        <div class="em-team-rail" aria-label="Evidence Makers crew members">
+      <div class="em-team-track">
+
+        <article class="em-team-card">
+          <div class="em-team-photo">
+            <img src="YOUR-CREW-MEMBER-01-IMAGE.jpg" alt="Crew member 01" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="em-team-info">
+            <h4>Crew Member 01</h4>
+            <p class="em-team-bio">Captures candid glances, quiet emotions and joyful details that make every wedding uniquely yours.</p>
+          </div>
+        </article>
+
+        <article class="em-team-card">
+          <div class="em-team-photo">
+            <img src="YOUR-CREW-MEMBER-02-IMAGE.jpg" alt="Crew member 02" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="em-team-info">
+            <h4>Crew Member 02</h4>
+            <p class="em-team-bio">Shapes each celebration into a cinematic story, with a thoughtful eye for movement, light and atmosphere.</p>
+          </div>
+        </article>
+
+        <article class="em-team-card">
+          <div class="em-team-photo">
+            <img src="YOUR-CREW-MEMBER-03-IMAGE.jpg" alt="Crew member 03" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="em-team-info">
+            <h4>Crew Member 03</h4>
+            <p class="em-team-bio">Notices the unplanned smiles and heartfelt connections that turn fleeting moments into lasting memories.</p>
+          </div>
+        </article>
+
+        <article class="em-team-card">
+          <div class="em-team-photo">
+            <img src="YOUR-CREW-MEMBER-04-IMAGE.jpg" alt="Crew member 04" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="em-team-info">
+            <h4>Crew Member 04</h4>
+            <p class="em-team-bio">Brings every frame together with considered colour, rhythm and detail, giving each story its final character.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= ABOUT FEATURE ================= -->
+<section class="em-about-feature">
+
+  <!-- TOP EDITORIAL TITLE -->
+  <header class="em-about-header">
+
+    <h2>Talk of the<br><span>TOWN</span></h2>
+    <p class="em-about-script">because every beautiful story deserves to be remembered.</p>
+  </header>
+
+  <!-- DESKTOP: STATS / TWO IMAGES / STORY
+       MOBILE: STATS / TWO IMAGES / STORY -->
+  <div class="em-about-composition">
+
+   
+<!-- FOUR FIXED METRICS -->
+    <div class="em-about-stats" aria-label="Evidence Makers at a glance">
+      <div class="em-stat" aria-label="2,000 plus weddings captured">
+        <span class="em-stat-number"><span class="em-stat-value" data-count="2000" data-format="comma" aria-hidden="true">2,000</span><span class="em-stat-suffix" aria-hidden="true">+</span></span>
+        <span class="em-stat-label">Weddings captured</span>
+      </div>
+
+      <div class="em-stat" aria-label="8 years of experience">
+        <span class="em-stat-number"><span class="em-stat-value" data-count="8" data-format="two-digit" aria-hidden="true">08</span></span>
+        <span class="em-stat-label">Years of experience</span>
+      </div>
+
+      <div class="em-stat" aria-label="54 plus five-star reviews">
+        <span class="em-stat-number"><span class="em-stat-value" data-count="54" data-format="plain" aria-hidden="true">54</span><span class="em-stat-suffix" aria-hidden="true">+</span></span>
+        <span class="em-stat-label">Five-star reviews</span>
+      </div>
+
+      <div class="em-stat" aria-label="1,000 plus cinematic events">
+        <span class="em-stat-number"><span class="em-stat-value" data-count="1000" data-format="comma" aria-hidden="true">1,000</span><span class="em-stat-suffix" aria-hidden="true">+</span></span>
+        <span class="em-stat-label">Cinematic events</span>
+      </div>
+    </div>
+
+    <!-- MIDDLE: TWO IMAGE PANELS -->
+    <div class="em-about-gallery">
+      <figure class="em-about-image em-about-image-one">
+        <img
+          src="https://evidencemakers.com/wp-content/uploads/2026/04/3.jpg-2-scaled.jpeg"
+          alt="A beautifully documented couple's story by Evidence Makers"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
+
+      <figure class="em-about-image em-about-image-two">
+        <img
+          src="YOUR-SECOND-IMAGE-URL"
+          alt="A second moment from the Evidence Makers wedding portfolio"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
+    </div>
+
+    <!-- RIGHT: BRAND STORY -->
+    <div class="em-about-story">
+      <span class="em-story-eyebrow">BEYOND THE FRAME</span>
+
+      <h3>
+        We don't just photograph weddings.
+        <i>We remember how they felt.</i>
+      </h3>
+
+      <div class="em-story-copy">
+        <p>
+          Some moments happen only once. A glance across the room,
+          a parent's quiet tear, the laughter that brings an entire
+          family together. These are the moments that make a wedding
+          yours, and the ones we believe deserve to last.
+        </p>
+
+        <p>
+          Since 2018, Evidence Makers has approached every celebration
+          with a simple belief: meaningful photography begins with
+          understanding people. We take the time to understand your
+          story, your personalities and the details that matter to you.
+        </p>
+
+        <p>
+          From intimate pre-wedding sessions to grand celebrations,
+          our approach brings together thoughtful photography,
+          considered composition and cinematic storytelling.
+          Never simply for the sake of a beautiful frame, but to
+          preserve something genuinely personal.
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<section class="em-elegance" aria-labelledby="em-elegance-title">
+  <h2 id="em-elegance-title">OUR ELEGANCE WORKS</h2>
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+<section class="em-portfolio-categories" aria-label="Photography portfolio categories">
+
+  <!-- PRE-WEDDINGS -->
+  <section class="em-category" aria-labelledby="em-preweddings-title">
+    <div class="em-category-heading">
+      <h2 id="em-preweddings-title">Pre-Weddings</h2>
+
+      <div class="em-category-controls">
+        <button class="em-category-arrow em-category-prev" type="button" aria-label="Previous pre-wedding photos">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18L9 12L15 6"/>
+          </svg>
+        </button>
+        <button class="em-category-arrow em-category-next" type="button" aria-label="Next pre-wedding photos">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18L15 12L9 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <a class="em-category-link" href="/pre-weddings/" aria-label="View all pre-wedding photography">
+        <svg viewBox="0 0 32 20" fill="none" aria-hidden="true">
+          <path d="M1 10H29M21 2L29 10L21 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="em-category-rail">
+      <div class="em-category-track">
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 1"><img src="https://evidencemakers.com/wp-content/uploads/2025/03/10-6-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 2"><img src="https://evidencemakers.com/wp-content/uploads/2025/03/2-7-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 3"><img src="https://evidencemakers.com/wp-content/uploads/2024/04/4-2-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 4"><img src="https://evidencemakers.com/wp-content/uploads/2024/04/7-2-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 5"><img src="https://evidencemakers.com/wp-content/uploads/2024/04/16-1-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/pre-weddings/" aria-label="View pre-wedding gallery image 6"><img src="https://evidencemakers.com/wp-content/uploads/2024/04/10-1-scaled.jpg" alt="Pre-wedding photography" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEDDINGS & RECEPTIONS -->
+  <section class="em-category" aria-labelledby="em-weddings-title">
+    <div class="em-category-heading">
+      <h2 id="em-weddings-title">Weddings &amp; Receptions</h2>
+
+      <div class="em-category-controls">
+        <button class="em-category-arrow em-category-prev" type="button" aria-label="Previous wedding photos">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18L9 12L15 6"/>
+          </svg>
+        </button>
+        <button class="em-category-arrow em-category-next" type="button" aria-label="Next wedding photos">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18L15 12L9 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <a class="em-category-link" href="/weddings-receptions/" aria-label="View all wedding and reception photography">
+        <svg viewBox="0 0 32 20" fill="none" aria-hidden="true">
+          <path d="M1 10H29M21 2L29 10L21 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="em-category-rail">
+      <div class="em-category-track">
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 1"><img src="https://evidencemakers.com/wp-content/uploads/2025/03/28.jpg" alt="Wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 2"><img src="https://evidencemakers.com/wp-content/uploads/2024/07/757A7663-scaled.jpg" alt="Wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 3"><img src="https://evidencemakers.com/wp-content/uploads/2026/04/2.jpg-1-scaled.jpeg" alt="Wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 4"><img src="https://evidencemakers.com/wp-content/uploads/2026/04/7.jpg-1.jpeg" alt="Wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 5"><img src="https://evidencemakers.com/wp-content/uploads/2025/03/25-2-scaled.jpg" alt="Wedding photography" loading="lazy"></a>
+        <a class="em-gallery-card" href="/weddings-receptions/" aria-label="View wedding gallery image 6"><img src="https://evidencemakers.com/wp-content/uploads/2024/04/30.jpg" alt="Wedding photography" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- CELEBRITY CLIENTS -->
+<section class="em-celebrity" aria-labelledby="em-celebrity-title">
+
+  <div class="em-celebrity__heading">
+    <h2 id="em-celebrity-title">Celebrity Clients</h2>
+  </div>
+
+  <div class="em-celebrity__carousel">
+
+    <button class="em-celebrity__nav em-celebrity__nav--prev"
+      type="button" aria-label="Previous items">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m15 18-6-6 6-6"/>
+      </svg>
+    </button>
+
+    <div class="em-celebrity__rail">
+      <div class="em-celebrity__track">
+
+        <!-- VIDEO 1 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover1.jpg"
+            alt="Celebrity engagement film" loading="lazy">
+          <button class="em-celebrity__play" type="button"
+            data-video-id="mHtaVOmP2gE" aria-label="Play video">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </article>
+
+        <!-- IMAGE 1 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover1.jpg"
+            alt="Celebrity photography" loading="lazy">
+        </article>
+
+        <!-- VIDEO 2 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover2.jpg"
+            alt="Celebrity wedding film" loading="lazy">
+          <button class="em-celebrity__play" type="button"
+            data-video-id="mHtaVOmP2gE" aria-label="Play video">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </article>
+
+        <!-- IMAGE 2 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover2.jpg"
+            alt="Celebrity event photography" loading="lazy">
+        </article>
+
+        <!-- VIDEO 3 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover2.jpg"
+            alt="Celebrity event film" loading="lazy">
+          <button class="em-celebrity__play" type="button"
+            data-video-id="mHtaVOmP2gE" aria-label="Play video">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </article>
+
+        <!-- IMAGE 3 -->
+        <article class="em-celebrity__card">
+          <img src="assets/portfolio/celebrityclients/cover2.jpg"
+            alt="Celebrity celebration photography" loading="lazy">
+        </article>
+
+      </div>
+    </div>
+
+    <button class="em-celebrity__nav em-celebrity__nav--next"
+      type="button" aria-label="Next items">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- VIDEO DIALOG -->
+  <dialog class="em-celebrity__dialog"
+    aria-label="Celebrity client video player">
+
+    <div class="em-celebrity__dialog-inner">
+
+      <button class="em-celebrity__close"
+        type="button" aria-label="Close video">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="em-celebrity__player">
+        <iframe
+          title="Celebrity client video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </dialog>
+
+</section>
+
+
+</section>
+
+
+  <!-- BRAND ADS & EVENTS -->
+  <!--<section class="em-category" aria-labelledby="em-brands-title">-->
+  <!--  <div class="em-category-heading">-->
+  <!--    <h2 id="em-brands-title">Brand Ads &amp; Events</h2>-->
+  <!--    <a class="em-category-link" href="/brand-ads-events/" aria-label="View brand advertising and events portfolio">-->
+  <!--      <svg viewBox="0 0 32 20" fill="none" aria-hidden="true"><path d="M1 10H29M21 2L29 10L21 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>-->
+  <!--    </a>-->
+  <!--  </div>-->
+  <!--  <div class="em-category-rail">-->
+  <!--    <div class="em-category-track">-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 1"><img src="YOUR-BRAND-EVENT-IMAGE-01.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 2"><img src="YOUR-BRAND-EVENT-IMAGE-02.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 3"><img src="YOUR-BRAND-EVENT-IMAGE-03.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 4"><img src="YOUR-BRAND-EVENT-IMAGE-04.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 5"><img src="YOUR-BRAND-EVENT-IMAGE-05.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--      <a class="em-gallery-card" href="/brand-ads-events/" aria-label="View brand and events portfolio image 6"><img src="YOUR-BRAND-EVENT-IMAGE-06.jpg" alt="Brand campaign and event photography" loading="lazy"></a>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+
+</section>
+
+
+
+
+
+                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="em-reviews" aria-labelledby="em-reviews-title">
+
+    <header class="em-reviews__header">
+
+        <h2 class="em-reviews__eyebrow" id="em-reviews-title">
+            HEARTFELT EVIDENCES
+        </h2>
+
+        <div class="em-reviews__controls" aria-label="Testimonial navigation">
+
+            <button
+                class="em-reviews__arrow"
+                id="em-reviews-prev"
+                type="button"
+                aria-label="Previous testimonials">
+
+                <svg viewBox="0 0 28 28" aria-hidden="true">
+                    <path d="M25 14H4M12 5 3 14l9 9"/>
+                </svg>
+
+            </button>
+
+            <button
+                class="em-reviews__arrow"
+                id="em-reviews-next"
+                type="button"
+                aria-label="Next testimonials">
+
+                <svg viewBox="0 0 28 28" aria-hidden="true">
+                    <path d="M3 14h21M16 5l9 9-9 9"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <div
+        class="em-reviews__grid"
+        id="em-reviews-grid"
+        aria-live="polite">
+    </div>
+
+
+    <!-- TWO DIRECT-CDN FEATURE VIDEOS: SIDE BY SIDE / STACKED ON MOBILE -->
+    <section class="em-reviews__videos" aria-label="Wedding films and behind-the-scenes videos">
+
+        <figure class="em-reviews__video-item">
+            <div
+                class="em-direct-video-wrapper"
+                data-em-video-wrapper
+                role="button"
+                tabindex="0"
+                aria-label="Play or pause Evidence Makers wedding film one"
+            >
+                <video
+                    class="em-hosted-video"
+                    data-em-hosted-video
+                    src="https://youtu.be/oKjQTqjW8jw?si=8UNMgeTaDhVoGH_o"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                   
+                </video>
+
+                <button
+                    class="em-video-control-badge"
+                    data-em-sound-toggle
+                    type="button"
+                    aria-label="Unmute video"
+                    title="Unmute Sound"
+                >
+                    <svg data-em-volume-icon viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                </button>
+            </div>
+        </figure>
+
+        <figure class="em-reviews__video-item">
+            <div
+                class="em-direct-video-wrapper"
+                data-em-video-wrapper
+                role="button"
+                tabindex="0"
+                aria-label="Play or pause Evidence Makers wedding film two"
+            >
+                <video
+                    class="em-hosted-video"
+                    data-em-hosted-video
+                    src="https://youtu.be/oKjQTqjW8jw?si=8UNMgeTaDhVoGH_o"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                   
+                  
+                </video>
+
+                <button
+                    class="em-video-control-badge"
+                    data-em-sound-toggle
+                    type="button"
+                    aria-label="Unmute video"
+                    title="Unmute Sound"
+                >
+                    <svg data-em-volume-icon viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                </button>
+            </div>
+        </figure>
+
+    </section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  <!-- ================= CONSULTATION ================= -->
+<section class="em-consultation" aria-labelledby="em-consultation-title">
+    <div class="em-consultation__inner">
+
+      <!-- LEFT: EDITORIAL COPY -->
+      <div class="em-consultation__copy">
+        <span class="em-consultation__eyebrow">Let's Talk</span>
+
+        <h1 class="em-consultation__title" id="em-consultation-title">
+          Let's begin with the story you have in mind.
+        </h1>
+
+        <p class="em-consultation__description">
+          Your wedding deserves more than a standard package. Tell us about the celebration you're planning, the people who matter most, and the moments you want to remember. We'll listen, understand your vision, and help shape a photography and film experience around it.
+        </p>
+
+        <ul class="em-consultation__points">
+          <li>
+            <svg class="em-consultation__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A relaxed, no-obligation conversation about your plans
+          </li>
+          <li>
+            <svg class="em-consultation__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Thoughtful guidance on photography, films and coverage
+          </li>
+          <li>
+            <svg class="em-consultation__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A collection shaped around your celebration and priorities
+          </li>
+          <li>
+            <svg class="em-consultation__check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Based in Chennai, available across India and for destination weddings
+          </li>
+        </ul>
+
+        <p class="em-consultation__note">
+          No pressure and no hurried decisions. Just an honest conversation about creating something meaningful together.
+        </p>
+      </div>
+
+      <!-- RIGHT: CAL.COM BOOKING EMBED -->
+      <div class="em-consultation__booking">
+        <h2 class="em-consultation__booking-title">Book your consultation</h2>
+        <p class="em-consultation__booking-description">
+          Choose a convenient time for a 20-minute conversation with our team. We'll take it from there.
+        </p>
+
+        <div class="em-consultation__calendar">
+          <div id="em-cal-inline"></div>
+        </div>
+
+        <p class="em-consultation__fallback">
+          Having trouble viewing the calendar? <a id="em-cal-fallback-link" href="https://cal.com/" target="_blank" rel="noopener">Open the booking page</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cal.com inline embed. Replace the calLink value below with your own Cal.com username/event slug. -->
+
+  <!-- =====================================================
+       CONSOLIDATED PAGE SCRIPTS
+       Scripts run after all page markup has been parsed.
+  ====================================================== -->
+
+  <!-- HERO SLIDER -->
+  <script>
+(function () {
+
+  const hero = document.querySelector('.em-fixed-hero');
+
+  if (!hero || hero.dataset.sliderInitialized === 'true') return;
+
+  hero.dataset.sliderInitialized = 'true';
+
+  const slides = Array.from(
+    hero.querySelectorAll('.em-fixed-hero__slide')
+  );
+
+  const previousButton = hero.querySelector(
+    '.em-fixed-hero__arrow--prev'
+  );
+
+  const nextButton = hero.querySelector(
+    '.em-fixed-hero__arrow--next'
+  );
+
+  if (slides.length <= 1) {
+    if (previousButton) previousButton.hidden = true;
+    if (nextButton) nextButton.hidden = true;
+    return;
+  }
+
+
+  /* =========================================
+     SLIDER SETTINGS
+
+     CHANGE THIS VALUE TO CONTROL AUTO-SCROLL SPEED
+  ========================================= */
+
+  const AUTOPLAY_DELAY = 5500;
+
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+  let isHovered = false;
+  let isFocused = false;
+
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+
+  /* =========================================
+     SHOW SLIDE
+  ========================================= */
+
+  function showSlide(index) {
+
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+
+      const isActive = i === currentIndex;
+
+      slide.classList.toggle('is-active', isActive);
+
+      slide.setAttribute(
+        'aria-hidden',
+        isActive ? 'false' : 'true'
+      );
+
+    });
+
+  }
+
+
+  /* =========================================
+     NEXT / PREVIOUS
+  ========================================= */
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function previousSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+
+  /* =========================================
+     AUTOPLAY
+  ========================================= */
+
+  function stopAutoplay() {
+
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+
+  }
+
+
+  function startAutoplay() {
+
+    stopAutoplay();
+
+    if (
+      reducedMotion ||
+      isHovered ||
+      isFocused ||
+      document.hidden
+    ) {
+      return;
+    }
+
+    autoplayTimer = setInterval(
+      nextSlide,
+      AUTOPLAY_DELAY
+    );
+
+  }
+
+
+  /* =========================================
+     ARROW EVENTS
+  ========================================= */
+
+  nextButton.addEventListener('click', function () {
+
+    nextSlide();
+    startAutoplay();
+
+  });
+
+  previousButton.addEventListener('click', function () {
+
+    previousSlide();
+    startAutoplay();
+
+  });
+
+
+  /* =========================================
+     PAUSE ON HOVER
+  ========================================= */
+
+  hero.addEventListener('mouseenter', function () {
+
+    isHovered = true;
+    stopAutoplay();
+
+  });
+
+  hero.addEventListener('mouseleave', function () {
+
+    isHovered = false;
+    startAutoplay();
+
+  });
+
+
+  /* Pause while keyboard controls are focused */
+
+  hero.addEventListener('focusin', function () {
+
+    isFocused = true;
+    stopAutoplay();
+
+  });
+
+  hero.addEventListener('focusout', function (event) {
+
+    if (!hero.contains(event.relatedTarget)) {
+      isFocused = false;
+      startAutoplay();
+    }
+
+  });
+
+
+  /* Pause when browser tab is hidden */
+
+  document.addEventListener('visibilitychange', function () {
+
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+
+  });
+
+
+  /* INITIALIZE */
+
+  showSlide(0);
+  startAutoplay();
+
+
+})();
+  </script>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <script>
+document.addEventListener('DOMContentLoaded',function(){
+  const header=document.getElementById('site-header');
+  const toggle=document.getElementById('mobile-toggle');
+  const overlay=document.getElementById('mobile-overlay');
+  if(!header||!toggle||!overlay)return;
+  let previousBodyOverflow='';
+  let previousBodyPaddingRight='';
+  function updateHeader(){header.classList.toggle('scrolled',window.scrollY>50)}
+  window.addEventListener('scroll',updateHeader,{passive:true});
+  updateHeader();
+  function openMenu(){
+    overlay.inert=false;overlay.setAttribute('aria-hidden','false');overlay.classList.add('active');
+    toggle.classList.add('active');toggle.setAttribute('aria-expanded','true');toggle.setAttribute('aria-label','Close navigation menu');
+    previousBodyOverflow=document.body.style.overflow;previousBodyPaddingRight=document.body.style.paddingRight;
+    const scrollbarWidth=Math.max(0,window.innerWidth-document.documentElement.clientWidth);
+    if(scrollbarWidth>0)document.body.style.paddingRight=scrollbarWidth+'px';
+    document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    overlay.classList.remove('active');toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');
+    overlay.setAttribute('aria-hidden','true');overlay.inert=true;
+    document.body.style.overflow=previousBodyOverflow;document.body.style.paddingRight=previousBodyPaddingRight;
+  }
+  toggle.addEventListener('click',function(){overlay.classList.contains('active')?closeMenu():openMenu()});
+  overlay.querySelectorAll('a').forEach(function(link){link.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&overlay.classList.contains('active')){closeMenu();toggle.focus()}});
+  window.addEventListener('resize',function(){if(window.innerWidth>991&&overlay.classList.contains('active'))closeMenu()});
+});
+  </script>
+
+  <!-- ABOUT / FOUNDER / EVIDENCE CREW -->
+  <script>
+(function () {
+  const section = document.querySelector('.em-about-crew');
+  if (!section || section.dataset.videoInit === 'true') return;
+  section.dataset.videoInit = 'true';
+
+  const videos = section.querySelectorAll('.em-autoplay-video');
+
+  // Crew rail arrow: advance the horizontal member cards.
+  const crewRail = section.querySelector('.em-team-rail');
+  const crewArrow = section.querySelector('.em-team-arrow');
+  if (crewRail && crewArrow) {
+    crewArrow.addEventListener('click', () => {
+      const firstCard = crewRail.querySelector('.em-team-card');
+      const step = firstCard ? firstCard.getBoundingClientRect().width + 12 : 280;
+      const atEnd = crewRail.scrollLeft + crewRail.clientWidth >= crewRail.scrollWidth - 8;
+      crewRail.scrollTo({
+        left: atEnd ? 0 : crewRail.scrollLeft + step,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (reduceMotion || saveData || !('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.4 && document.visibilityState === 'visible') {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: [0, 0.4, 0.75] });
+
+  videos.forEach(video => observer.observe(video));
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible') videos.forEach(video => video.pause());
+  });
+})();
+  </script>
+
+  <!-- ABOUT FEATURE / EDITORIAL SECTION -->
+  <script>
+(function () {
+  const section = document.querySelector('.em-about-feature');
+  if (!section || section.dataset.counterInitialized === 'true') return;
+  section.dataset.counterInitialized = 'true';
+
+  const counters = Array.from(section.querySelectorAll('.em-stat-value[data-count]'));
+  if (!counters.length) return;
+
+  const DURATION = 1150; // Count-up duration in milliseconds.
+  let hasStarted = false;
+
+  function formatValue(value, format) {
+    const rounded = Math.round(value);
+    if (format === 'comma') return rounded.toLocaleString('en-IN');
+    if (format === 'two-digit') return String(rounded).padStart(2, '0');
+    return String(rounded);
+  }
+
+  function setFinalValues() {
+    counters.forEach((counter) => {
+      const target = Number(counter.dataset.count || 0);
+      counter.textContent = formatValue(target, counter.dataset.format);
+    });
+  }
+
+  function animateCounters() {
+    if (hasStarted) return;
+    hasStarted = true;
+
+    const items = counters.map((counter) => ({
+      element: counter,
+      target: Number(counter.dataset.count || 0),
+      format: counter.dataset.format || 'plain'
+    }));
+
+    const startTime = performance.now();
+
+    function frame(now) {
+      const progress = Math.min((now - startTime) / DURATION, 1);
+      // Ease-out: quick movement at the start, then a gentle settle at the target.
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      items.forEach((item) => {
+        const current = item.target * eased;
+        item.element.textContent = formatValue(current, item.format);
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        // Lock each counter to its exact final value.
+        items.forEach((item) => {
+          item.element.textContent = formatValue(item.target, item.format);
+        });
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  // Start each counter only once when the About section enters the viewport.
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        animateCounters();
+        observer.disconnect();
+      }
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+  } else {
+    animateCounters();
+  }
+
+  // Reduced-motion visitors see the final values immediately.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setFinalValues();
+    hasStarted = true;
+  }
+})();
+  </script>
+
+  <!-- PORTFOLIO CATEGORIES -->
+  <script>
+(() => {
+  const root = document.querySelector('.em-portfolio-categories');
+  if (!root || root.dataset.autoScrollInit === 'true') return;
+  root.dataset.autoScrollInit = 'true';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  root.querySelectorAll('.em-category-rail').forEach((rail) => {
+    let pauseUntil = 0;
+    let direction = 1;
+
+    const pause = () => { pauseUntil = Date.now() + 5000; };
+    rail.addEventListener('pointerdown', pause, { passive: true });
+    rail.addEventListener('touchstart', pause, { passive: true });
+    rail.addEventListener('wheel', pause, { passive: true });
+    rail.addEventListener('mouseenter', pause);
+    rail.addEventListener('focusin', pause);
+    rail.addEventListener('scroll', () => { pauseUntil = Date.now() + 2500; }, { passive: true });
+
+    window.setInterval(() => {
+      if (Date.now() < pauseUntil) return;
+      if (document.visibilityState !== 'visible') return;
+
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+      if (maxScroll <= 8) return;
+
+      const firstCard = rail.querySelector('.em-gallery-card');
+      const step = firstCard ? firstCard.getBoundingClientRect().width + 2 : 220;
+      const current = rail.scrollLeft;
+
+      if (current >= maxScroll - 8) {
+        direction = -1;
+      } else if (current <= 8) {
+        direction = 1;
+      }
+
+      rail.scrollTo({
+        left: Math.max(0, Math.min(maxScroll, current + step * direction)),
+        behavior: 'smooth'
+      });
+    }, 3200);
+  });
+
+  // Hide broken placeholder images until real image URLs are supplied.
+  root.querySelectorAll('.em-gallery-card img').forEach((img) => {
+    img.addEventListener('error', () => { img.style.display = 'none'; });
+  });
+})();
+  </script>
+
+  <!-- TESTIMONIALS / VIDEO REVIEWS -->
+  <script>
+const evidenceMakersReviews = [
+    {
+        reviewer: "Lakshmi Makeup Artist",
+        rating: 5,
+        review: "Thank you so much, Anna, for the wonderful photography and beautiful album! Every picture is captured with so much perfection, creativity, and love. You’ve turned our precious moments into timeless memories that we can cherish forever. Truly amazing work, Anna! Thank you for your effort, patience, and dedication in making everything look so beautiful. Lots of love and appreciation for your incredible work!"
+    },
+    {
+        reviewer: "Praveen Kumar",
+        rating: 5,
+        review: "The way they handling clients are very friendly and I loved their work and such a beautiful pictures they’re delivering..."
+    },
+    {
+        reviewer: "Siva Prakash",
+        rating: 5,
+        review: "Very beautiful photography! Every photo is on a different level. He has captured moments more beautifully and naturally than we expected. His creativity, patience, perfection are all super. Not only photography, he has turned every moment into a beautiful memory. Definitely a great photographer! Highly recommended!"
+    },
+    {
+        reviewer: "Raghunath V",
+        rating: 5,
+        review: "We had an absolutely wonderful experience with Satish and his team for our engagement and reception photography. The..."
+    },
+    {
+        reviewer: "Raja Kumari",
+        rating: 5,
+        review: "A big heartfelt thanks to @evidence makers wedding photography for witnessing and capturing our most memorable day...."
+    },
+    {
+        reviewer: "Vinodhini Sekar",
+        rating: 5,
+        review: "We chose the Evidence Makers team for our son's first birthday photography, and it was a wonderful experience. The..."
+    },
+    {
+        reviewer: "Gokul Purushothaman",
+        rating: 5,
+        review: "We couldn't be happier that we chose Evidence Makers as our photographers. From the very beginning, Sathish was an..."
+    },
+    {
+        reviewer: "Mathi Bharathi Baskaran",
+        rating: 5,
+        review: "Heartfelt Special Thanks to Evidence makers team and to Sathish...."
+    },
+    {
+        reviewer: "M. Rajesh",
+        rating: 5,
+        review: "Amazing work! Very professional and friendly team. The photos and videos came out beautifully. Highly recommend for weddings!"
+    },
+    {
+        reviewer: "Sunil Simpson",
+        rating: 5,
+        review: "Amazing cinematography shots and excellent editing work. You guys rock and keep rocking to reach more heights!!!!"
+    },
+    {
+        reviewer: "Caroline Amenda",
+        rating: 5,
+        review: "Thank you so much for your immense efforts towards our song OH NA! NA! bro. The hard work, creativity, and..."
+    },
+    {
+        reviewer: "Jenifer Lancy",
+        rating: 5,
+        review: "Awesome videography"
+    },
+    {
+        reviewer: "Emeemal Sharon",
+        rating: 5,
+        review: "Dear Evident Team,..."
+    },
+    {
+        reviewer: "Hyacinth Sarah",
+        rating: 5,
+        review: "Amazing photography! Beautiful shots, great clarity, and perfect timing."
+    },
+    {
+        reviewer: "Srividhya B",
+        rating: 5,
+        review: "Special thanks to the entire team for such amazing photoshoots from Pre wed shoot to our marriage day. The editing..."
+    },
+    {
+        reviewer: "Sharon Ponsily C",
+        rating: 5,
+        review: "From the very first consultation, we knew we were in the right hands. The team at Evidence Makers demonstrated such..."
+    },
+    {
+        reviewer: "Priya Dharshini",
+        rating: 5,
+        review: "The pre-wedding shoot was an experience we'll cherish forever. The team made us feel so comfortable and natural in front..."
+    },
+    {
+        reviewer: "Shahul Hameed",
+        rating: 5,
+        review: "We got to know about Evidence Makers through a reference from our family member but now we refer Evidence Makers to..."
+    },
+    {
+        reviewer: "Suganya Subramanian",
+        rating: 5,
+        review: "The artistry of Evidence Makers (Sathish) is simply unmatched. We approached them with a bold concept—a pre-wedding shoot..."
+    },
+    {
+        reviewer: "Sravana Sandya",
+        rating: 5,
+        review: "Absolutely loved the photos. Every moment was captured beautifully..."
+    },
+    {
+        reviewer: "Shyni Mol",
+        rating: 5,
+        review: "Had a good experience with Evidence makers photography. Especially we have to appreciate our founder, Mr. Sathish and..."
+    },
+    {
+        reviewer: "Divya Smartu",
+        rating: 5,
+        review: "Amazing photography experience we had for my baby shower and baby photo shoot Sathish is a friendly person and always flexible happy yo choose him for our photography journey"
+    },
+    {
+        reviewer: "Hishitaa Ramesh",
+        rating: 5,
+        review: "Fantastic Work by Sathish & Team. Highly Cooperative with our requirements and deliverables were beyond expectations."
+    },
+    {
+        reviewer: "Mahashwetha",
+        rating: 5,
+        review: "Had a great experience during the event. Photos were toooooo amazing and Album was like a wow.Thank you for the work"
+    },
+    {
+        reviewer: "Yakshinee Ramesh",
+        rating: 5,
+        review: "I honestly loved his work!!! very professional and creative. I loved the way they take extra efforts for the output. I..."
+    },
+    {
+        reviewer: "Aarthi Ramesh",
+        rating: 5,
+        review: "Had a great experience in event. Sathish bro was too friendly and punctual. U covered every single person who attended the function. Thanks for your service and keep growing bro."
+    },
+    {
+        reviewer: "Prasanna Pooran",
+        rating: 5,
+        review: "Best in town!!!!"
+    },
+    {
+        reviewer: "Amman Thunai",
+        rating: 5,
+        review: "His photography skills are impressive and highly creative. He captures distinctive images and possesses strong technical abilities as well."
+    },
+    {
+        reviewer: "Newetha K",
+        rating: 5,
+        review: "Photographer was very polite and engaging for the event. The outcome of the photos were too good and impressive."
+    },
+    {
+        reviewer: "Anandha Kanna",
+        rating: 5,
+        review: "Recently I gave a order for my family function. Output was wonderful.. especially candid..."
+    },
+    {
+        reviewer: "Rajan Rajan",
+        rating: 5,
+        review: "Evidencemaker Photography did an amazing job! The team was professional, creative, and very committed. A special mention..."
+    },
+    {
+        reviewer: "Attitudes Dance & Fitness Healthcare Studio",
+        rating: 5,
+        review: "We had a great experience in this photo studio. The photographer was amazing. He took wonderful pics as we went there as..."
+    },
+    {
+        reviewer: "Durai Karthick",
+        rating: 5,
+        review: "An amazing experience with our maternity photoshoot! Our photographer was incredibly professional, making us feel..."
+    },
+    {
+        reviewer: "Solomon Nithi",
+        rating: 5,
+        review: "Evidence Makers Capturing souls, Not Smiles"
+    },
+    {
+        reviewer: "Merp String",
+        rating: 5,
+        review: "Any one wants to book a very good photographer. He is the guy, He is a magician"
+    },
+    {
+        reviewer: "Goodwin Samuel",
+        rating: 5,
+        review: "Good photography skills, go for it."
+    },
+    {
+        reviewer: "Boopathi Gopinathan",
+        rating: 5,
+        review: "Your professionalism and friendly demeanor made the photoshoot a breeze. Thank you for making us feel so comfortable and at ease, Sathish!"
+    },
+    {
+        reviewer: "Vinothini Manimaran",
+        rating: 5,
+        review: "Amazing photography skills, lot of patience and cost effective"
+    },
+    {
+        reviewer: "Subash S",
+        rating: 5,
+        review: "Best wedding photography team"
+    },
+    {
+        reviewer: "Sabari Nathan",
+        rating: 5,
+        review: "Freeze the moment with the evidence maker"
+    }
+];
+
+(function () {
+    const grid = document.getElementById("em-reviews-grid");
+    const previousButton = document.getElementById("em-reviews-prev");
+    const nextButton = document.getElementById("em-reviews-next");
+    const mobileQuery = window.matchMedia("(max-width: 700px)");
+
+    if (grid && previousButton && nextButton) {
+        let currentPage = 0;
+
+        function escapeHTML(value) {
+            return String(value ?? "").replace(/[&<>"']/g, character => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            })[character]);
+        }
+
+        function getItemsPerPage() {
+            return mobileQuery.matches ? 1 : 3;
+        }
+
+        function renderTestimonials() {
+            const itemsPerPage = getItemsPerPage();
+            const totalPages = Math.ceil(evidenceMakersReviews.length / itemsPerPage);
+            if (!totalPages) return;
+
+            currentPage = ((currentPage % totalPages) + totalPages) % totalPages;
+            const start = currentPage * itemsPerPage;
+            const visibleReviews = evidenceMakersReviews.slice(start, start + itemsPerPage);
+
+            grid.innerHTML = visibleReviews.map(item => `
+                <article class="em-review">
+                    <p class="em-review__text">${escapeHTML(item.review)}</p>
+                    <div class="em-review__rating" aria-label="${item.rating} out of 5 stars">
+                        ${"★".repeat(item.rating)}
+                    </div>
+                    <footer class="em-review__footer">
+                        <h3 class="em-review__name">${escapeHTML(item.reviewer)}</h3>
+                    </footer>
+                </article>
+            `).join("");
+        }
+
+        previousButton.addEventListener("click", () => {
+            currentPage--;
+            renderTestimonials();
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentPage++;
+            renderTestimonials();
+        });
+
+        mobileQuery.addEventListener("change", () => {
+            currentPage = 0;
+            renderTestimonials();
+        });
+
+        renderTestimonials();
+    }
+
+    // Direct CDN video layer: click the video area to play/pause;
+    // use the bottom-right badge to mute/unmute without toggling playback.
+    const wrappers = document.querySelectorAll("[data-em-video-wrapper]");
+
+    const mutedMarkup = `
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>`;
+
+    const unmutedMarkup = `
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
+
+    wrappers.forEach(wrapper => {
+        const video = wrapper.querySelector("[data-em-hosted-video]");
+        const badge = wrapper.querySelector("[data-em-sound-toggle]");
+        const icon = wrapper.querySelector("[data-em-volume-icon]");
+        if (!video || !badge || !icon) return;
+
+        // Ensure the muted autoplay attempt begins on supported browsers.
+        video.muted = true;
+        const playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === "function") {
+            playAttempt.catch(() => {});
+        }
+
+        function togglePlayback() {
+            if (video.paused) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+        }
+
+        wrapper.addEventListener("click", event => {
+            if (event.target.closest("[data-em-sound-toggle]")) return;
+            togglePlayback();
+        });
+
+        wrapper.addEventListener("keydown", event => {
+            if (event.target !== wrapper) return;
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                togglePlayback();
+            }
+        });
+
+        badge.addEventListener("click", event => {
+            event.stopPropagation();
+            video.muted = !video.muted;
+            icon.innerHTML = video.muted ? mutedMarkup : unmutedMarkup;
+            badge.title = video.muted ? "Unmute Sound" : "Mute Sound";
+            badge.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
+            if (video.paused) video.play().catch(() => {});
+        });
+    });
+})();
+  </script>
+
+  <!-- CONSULTATION / CAL.COM -->
+  <script>
+(function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else {
+            p(cal, ar);
+          }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+
+    /* IMPORTANT: replace 'YOUR-CAL-USERNAME/wedding-consultation' with your real Cal.com event link path. */
+    const emCalLink = "YOUR-CAL-USERNAME/wedding-consultation";
+
+    Cal("inline", {
+      elementOrSelector: "#em-cal-inline",
+      calLink: emCalLink,
+      config: {
+        layout: "month_view",
+        theme: "light"
+      }
+    });
+
+    Cal("ui", {
+      theme: "light",
+      styles: {
+        branding: {
+          brandColor: "#5D5B5C"
+        }
+      },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+
+    const fallbackLink = document.getElementById("em-cal-fallback-link");
+    if (fallbackLink && !emCalLink.includes("YOUR-CAL-USERNAME")) {
+      fallbackLink.href = "https://cal.com/" + emCalLink;
+    }
+  </script>
+  
+  
+   <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const card = document.getElementById('celeb-video-card');
+  const iframe = document.getElementById('celeb-iframe');
+  const audioBtn = document.getElementById('audioToggleBtn');
+  const section = card ? card.closest('.em-category') : null;
+  const rail = section ? section.querySelector('.em-category-rail') : null;
+  const autoplayBtn = section ? section.querySelector('[data-celeb-autoplay-toggle]') : null;
+  const previousBtn = section ? section.querySelector('[data-celeb-video-prev]') : null;
+  const nextBtn = section ? section.querySelector('[data-celeb-video-next]') : null;
+  if (!card || !iframe || !section || !rail) return;
+
+  const desktopQuery = window.matchMedia('(hover: hover) and (min-width: 769px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let isMuted = true;
+  let autoplayEnabled = !reducedMotion;
+  let autoplayTimer = null;
+  let isPointerInside = false;
+
+  function sendYTCommand(func, args = []) {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
+  }
+
+  function updateAudioButton() {
+    if (!audioBtn) return;
+    const muteIcon = audioBtn.querySelector('.icon-mute');
+    const unmuteIcon = audioBtn.querySelector('.icon-unmute');
+    if (muteIcon) muteIcon.style.display = isMuted ? 'block' : 'none';
+    if (unmuteIcon) unmuteIcon.style.display = isMuted ? 'none' : 'block';
+    audioBtn.setAttribute('aria-label', isMuted ? 'Unmute video' : 'Mute video');
+    audioBtn.title = isMuted ? 'Unmute video' : 'Mute video';
+  }
+
+  function playVideo() {
+    card.classList.add('is-playing');
+    sendYTCommand('playVideo');
+    if (isMuted) sendYTCommand('mute');
+  }
+
+  function pauseVideo() {
+    sendYTCommand('pauseVideo');
+    card.classList.remove('is-playing');
+  }
+
+  function stopAutoSlide() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function updateAutoplayButton() {
+    if (!autoplayBtn) return;
+    autoplayBtn.setAttribute('aria-pressed', String(autoplayEnabled));
+    autoplayBtn.setAttribute('aria-label', autoplayEnabled
+      ? 'Pause automatic gallery movement'
+      : 'Start automatic gallery movement');
+    autoplayBtn.title = autoplayEnabled ? 'Pause automatic movement' : 'Start automatic movement';
+  }
+
+  function galleryStep() {
+    const first = rail.querySelector('.em-gallery-card');
+    const track = rail.querySelector('.em-category-track');
+    if (!first) return 220;
+    const gap = track ? parseFloat(getComputedStyle(track).gap) || 0 : 0;
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  function moveGallery(direction) {
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    let destination = rail.scrollLeft + direction * galleryStep();
+    if (destination > maxScroll - 4) destination = 0;
+    if (destination < 0) destination = maxScroll;
+    rail.scrollTo({ left: destination, behavior: reducedMotion ? 'auto' : 'smooth' });
+    startAutoSlide();
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    if (!autoplayEnabled || reducedMotion || isPointerInside || document.hidden) return;
+    autoplayTimer = setInterval(() => {
+      if (isPointerInside || document.hidden) return;
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+      if (maxScroll <= 4) return;
+      const next = rail.scrollLeft + galleryStep();
+      rail.scrollTo({
+        left: next >= maxScroll - 4 ? 0 : next,
+        behavior: reducedMotion ? 'auto' : 'smooth'
+      });
+    }, 4200);
+  }
+
+  // Desktop hover plays muted; moving the pointer away pauses and restores the poster.
+  card.addEventListener('mouseenter', () => {
+    if (desktopQuery.matches) playVideo();
+  });
+  card.addEventListener('mouseleave', () => {
+    if (desktopQuery.matches) pauseVideo();
+  });
+
+  // Touch devices start the video when the poster is tapped. Sound control stays desktop-only.
+  card.addEventListener('click', event => {
+    if (event.target.closest('.em-audio-toggle, .em-video-nav')) return;
+    if (!desktopQuery.matches && !card.classList.contains('is-playing')) playVideo();
+  });
+
+  if (audioBtn) {
+    audioBtn.addEventListener('click', event => {
+      event.stopPropagation();
+      isMuted = !isMuted;
+      sendYTCommand(isMuted ? 'mute' : 'unMute');
+      updateAudioButton();
+    });
+  }
+
+  if (previousBtn) previousBtn.addEventListener('click', event => {
+    event.stopPropagation();
+    moveGallery(-1);
+  });
+  if (nextBtn) nextBtn.addEventListener('click', event => {
+    event.stopPropagation();
+    moveGallery(1);
+  });
+
+  if (autoplayBtn) {
+    autoplayBtn.addEventListener('click', () => {
+      autoplayEnabled = !autoplayEnabled;
+      updateAutoplayButton();
+      if (autoplayEnabled) startAutoSlide();
+      else stopAutoSlide();
+    });
+  }
+
+  // Pause the gallery while the user is anywhere inside this section.
+  section.addEventListener('mouseenter', () => {
+    isPointerInside = true;
+    stopAutoSlide();
+  });
+  section.addEventListener('mouseleave', () => {
+    isPointerInside = false;
+    startAutoSlide();
+  });
+  section.addEventListener('focusin', stopAutoSlide);
+  section.addEventListener('focusout', event => {
+    if (!section.contains(event.relatedTarget)) startAutoSlide();
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoSlide();
+      pauseVideo();
+    } else {
+      startAutoSlide();
+    }
+  });
+
+  isMuted = true;
+  updateAudioButton();
+  updateAutoplayButton();
+  startAutoSlide();
+});
+
+</script>
+
+<script>
+(() => {
+  const section = document.querySelector('.em-celebrity');
+  if (!section) return;
+
+  const dialog = section.querySelector('.em-celebrity__dialog');
+  const iframe = dialog.querySelector('iframe');
+  const closeButton = dialog.querySelector('.em-celebrity__close');
+  const playButtons = section.querySelectorAll('.em-celebrity__play');
+  const rail = section.querySelector('.em-celebrity__rail');
+  const previousButton = section.querySelector('.em-celebrity__nav--prev');
+  const nextButton = section.querySelector('.em-celebrity__nav--next');
+
+  function updateNavigation() {
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    previousButton.disabled = rail.scrollLeft <= 2;
+    nextButton.disabled = maxScroll <= 2 || rail.scrollLeft >= maxScroll - 2;
+  }
+
+  function scrollGallery(direction) {
+    rail.scrollBy({
+      left: direction * Math.max(rail.clientWidth * 0.8, 220),
+      behavior: 'smooth'
+    });
+  }
+
+  previousButton.addEventListener('click', () => scrollGallery(-1));
+  nextButton.addEventListener('click', () => scrollGallery(1));
+  rail.addEventListener('scroll', updateNavigation, { passive: true });
+  window.addEventListener('resize', updateNavigation);
+  updateNavigation();
+
+ function openVideo(videoId) {
+    if (!videoId) return;
+
+    const videoUrl =
+      'https://www.youtube-nocookie.com/embed/' +
+      encodeURIComponent(videoId) +
+      '?autoplay=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&playsinline=1';
+
+    iframe.src = videoUrl;
+
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+
+    document.body.classList.add('em-celebrity-video-open');
+  }
+
+  function closeVideo() {
+    if (dialog.open && typeof dialog.close === 'function') {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+    }
+
+    /* Clearing the iframe source stops playback immediately. */
+    iframe.src = 'about:blank';
+    document.body.classList.remove('em-celebrity-video-open');
+  }
+
+  playButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      openVideo(button.dataset.videoId);
+    });
+  });
+
+  closeButton.addEventListener('click', closeVideo);
+
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) closeVideo();
+  });
+
+  dialog.addEventListener('close', () => {
+    iframe.src = 'about:blank';
+    document.body.classList.remove('em-celebrity-video-open');
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && dialog.open) {
+      closeVideo();
+    }
+  });
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  function setupCarousel(section, rail, prevButton, nextButton, cardSelector) {
+    if (!section || !rail || !prevButton || !nextButton) return;
+
+    const getStep = () => {
+      const card = rail.querySelector(cardSelector);
+      return card
+        ? card.getBoundingClientRect().width + 12
+        : rail.clientWidth * 0.8;
+    };
+
+    function updateArrows() {
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+
+      prevButton.disabled = rail.scrollLeft <= 2;
+      nextButton.disabled =
+        maxScroll <= 2 || rail.scrollLeft >= maxScroll - 2;
+    }
+
+    prevButton.addEventListener('click', () => {
+      rail.scrollBy({
+        left: -getStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    nextButton.addEventListener('click', () => {
+      rail.scrollBy({
+        left: getStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    rail.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+
+    updateArrows();
+  }
+
+  /* PRE-WEDDINGS, WEDDINGS & OTHER CATEGORY RAILS */
+  document.querySelectorAll('.em-category').forEach(section => {
+    setupCarousel(
+      section,
+      section.querySelector('.em-category-rail'),
+      section.querySelector('.em-rail-prev'),
+      section.querySelector('.em-rail-next'),
+      '.em-gallery-card'
+    );
+  });
+
+  /* EVIDENCE CREW */
+  document.querySelectorAll('.em-team-area').forEach(section => {
+    setupCarousel(
+      section,
+      section.querySelector('.em-team-rail'),
+      section.querySelector('.em-team-arrow--prev'),
+      section.querySelector('.em-team-arrow--next'),
+      '.em-team-card'
+    );
+  });
+
+  /* CELEBRITY CLIENTS — existing arrow controls */
+  document.querySelectorAll('.em-celebrity').forEach(section => {
+    const rail = section.querySelector('.em-celebrity__rail');
+    const prev = section.querySelector('.em-celebrity__nav--prev');
+    const next = section.querySelector('.em-celebrity__nav--next');
+
+    setupCarousel(
+      section,
+      rail,
+      prev,
+      next,
+      '.em-celebrity__card'
+    );
+  });
+
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* PRE-WEDDINGS AND WEDDINGS */
+  document.querySelectorAll('.em-category').forEach(function (section) {
+    const rail = section.querySelector('.em-category-rail');
+    const prev = section.querySelector('.em-category-prev');
+    const next = section.querySelector('.em-category-next');
+
+    if (!rail || !prev || !next) return;
+
+    function getStep() {
+      const card = rail.querySelector('.em-gallery-card');
+      return card ? card.getBoundingClientRect().width + 12 : 250;
+    }
+
+    function updateArrows() {
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+
+      prev.disabled = rail.scrollLeft <= 2;
+      next.disabled = maxScroll <= 2 || rail.scrollLeft >= maxScroll - 2;
+    }
+
+    prev.addEventListener('click', function () {
+      rail.scrollBy({
+        left: -getStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    next.addEventListener('click', function () {
+      rail.scrollBy({
+        left: getStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    rail.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+
+    updateArrows();
+  });
+
+  /* CELEBRITY CLIENTS */
+  document.querySelectorAll('.em-celebrity').forEach(function (section) {
+    const rail = section.querySelector('.em-celebrity__rail');
+    const prev = section.querySelector('.em-celebrity__nav--prev');
+    const next = section.querySelector('.em-celebrity__nav--next');
+
+    if (!rail || !prev || !next) return;
+
+    function getStep() {
+      const card = rail.querySelector('.em-celebrity__card');
+      return card ? card.getBoundingClientRect().width + 12 : 250;
+    }
+
+    function updateArrows() {
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+
+      prev.disabled = rail.scrollLeft <= 2;
+      next.disabled = maxScroll <= 2 || rail.scrollLeft >= maxScroll - 2;
+    }
+
+    prev.addEventListener('click', function () {
+      rail.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', function () {
+      rail.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+
+    rail.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+
+    updateArrows();
+
+    /* VIDEO MODAL */
+    const dialog = section.querySelector('.em-celebrity__dialog');
+    const iframe = dialog.querySelector('iframe');
+    const closeButton = dialog.querySelector('.em-celebrity__close');
+
+    function openVideo(videoId) {
+      if (!videoId) return;
+
+      iframe.src =
+        'https://www.youtube-nocookie.com/embed/' +
+        encodeURIComponent(videoId) +
+        '?autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1';
+
+      if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute('open', '');
+      }
+
+      document.body.classList.add('em-celebrity-video-open');
+    }
+
+    function closeVideo() {
+      if (dialog.open && typeof dialog.close === 'function') {
+        dialog.close();
+      } else {
+        dialog.removeAttribute('open');
+      }
+
+      iframe.src = 'about:blank';
+      document.body.classList.remove('em-celebrity-video-open');
+    }
+
+    section.querySelectorAll('.em-celebrity__play').forEach(function (button) {
+      button.addEventListener('click', function () {
+        openVideo(button.dataset.videoId);
+      });
+    });
+
+    closeButton.addEventListener('click', closeVideo);
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) closeVideo();
+    });
+
+    dialog.addEventListener('close', function () {
+      iframe.src = 'about:blank';
+      document.body.classList.remove('em-celebrity-video-open');
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>
+
+
+
+
