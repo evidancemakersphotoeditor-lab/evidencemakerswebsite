@@ -2812,7 +2812,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 .em-celebrity__dialog {
   position: fixed;
   inset: 0;
-  width: min(1100px, calc(100% - 36px));
+  width: min(420px, calc(100% - 32px));
   max-width: none;
   max-height: none;
   height: fit-content;
@@ -3123,10 +3123,10 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 
 .em-celebrity__player {
     position: relative;
-    width: 100%;
-    max-width: 420px;       /* Controls the portrait width on desktop */
-    height: 75vh;           /* Restricts height relative to the viewport */
-    max-height: 740px;      /* Caps the maximum height */
+    width: auto;
+    max-width: min(420px, calc(100vw - 32px));
+    height: min(740px, calc(100dvh - 72px));
+    aspect-ratio: 9 / 16;
     margin: 0 auto;         /* Centers the player horizontally */
     overflow: hidden;
     background: #000;
