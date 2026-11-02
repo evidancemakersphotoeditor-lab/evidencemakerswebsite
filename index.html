@@ -230,10 +230,12 @@
 @media (max-width: 600px) {
 
   .em-fixed-hero {
-    margin: -11% 0;
+    margin: 0;
     padding: 0;
-    height: 100dvh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .em-fixed-hero .em-fixed-hero__slide {
@@ -390,7 +392,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
     --em-muted: #898285;
     width: 100%;
     margin: 0;
-    padding: 54px 0 62px;
+    padding: 76px 0 62px;
     overflow: hidden;
     background: #F2E9E1;
     color: var(--em-text);
@@ -900,7 +902,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 
 
   @media (max-width: 760px) {
-    .em-about-crew { padding: 46px 0 48px; }
+    .em-about-crew { padding: 64px 0 48px; }
     .em-founder {
       display: flex;
       flex-direction: column;
@@ -1091,7 +1093,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
   }
 
   @media (max-width: 760px) {
-    .em-about-crew { padding: 46px 0px 0px 0px; }
+    .em-about-crew { padding: 64px 0 48px; }
     .em-founder {
       display: flex;
       flex-direction: column;
@@ -3176,6 +3178,75 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 }
 </style>
 
+  <style>
+    .em-crew-heading,
+    .em-crew-film,
+    .em-team-area {
+      display: none !important; /* Temporarily hide the People Behind section. */
+    }
+
+    .em-site-footer,
+    .em-site-footer * {
+      box-sizing: border-box;
+      font-family: 'Bodoni Moda', Georgia, serif;
+    }
+    .em-site-footer {
+      padding: 44px clamp(20px, 6vw, 84px);
+      color: #F2E9E1;
+      background: #292728;
+    }
+    .em-site-footer__nav {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(28px, 7vw, 100px);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .em-site-footer a,
+    .em-site-footer summary {
+      color: inherit;
+      font-size: 16px;
+      letter-spacing: .06em;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .em-site-footer a:hover,
+    .em-site-footer summary:hover { color: #D2AE91; }
+    .em-site-footer__portfolio { position: relative; }
+    .em-site-footer__portfolio summary { list-style: none; }
+    .em-site-footer__portfolio summary::-webkit-details-marker { display: none; }
+    .em-site-footer__portfolio summary::after {
+      content: '⌄';
+      display: inline-block;
+      margin-left: 8px;
+      transition: transform .2s ease;
+    }
+    .em-site-footer__portfolio[open] summary::after { transform: rotate(180deg); }
+    .em-site-footer__submenu {
+      display: grid;
+      gap: 12px;
+      min-width: 240px;
+      margin: 14px 0 0;
+      padding: 16px 18px;
+      background: #393536;
+      list-style: none;
+    }
+    .em-site-footer__submenu a { font-size: 13px; }
+    .em-site-footer a:focus-visible,
+    .em-site-footer summary:focus-visible {
+      outline: 2px solid #D2AE91;
+      outline-offset: 5px;
+    }
+    @media (max-width: 600px) {
+      .em-site-footer { padding: 34px 20px; }
+      .em-site-footer__nav { justify-content: flex-start; gap: 22px 30px; }
+      .em-site-footer__submenu { position: static; }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -3185,7 +3256,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 
 
 <!-- ================= HERO SLIDER ================= -->
-<section class="em-fixed-hero" aria-label="Evidence Makers wedding photography">
+<section class="em-fixed-hero" id="home" aria-label="Evidence Makers wedding photography">
   <div class="em-fixed-hero__background" aria-hidden="true">
 
     <!-- SLIDE 01: EXISTING IMAGE -->
@@ -3311,7 +3382,7 @@ html{scrollbar-gutter:stable;scroll-behavior:smooth}
 
 
 <!-- ================= ABOUT / FOUNDER / CREW ================= -->
-<section class="em-about-crew">
+<section class="em-about-crew" id="about">
 
   <!-- FOUNDER INTRO: TEXT + IMAGE + VIDEO -->
   <div class="em-founder">
@@ -5342,6 +5413,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+
+<footer class="em-site-footer">
+  <nav class="em-site-footer__nav" aria-label="Footer navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About us</a>
+    <details class="em-site-footer__portfolio">
+      <summary>Portfolio</summary>
+      <ul class="em-site-footer__submenu">
+        <li><a href="/pre-weddings/">Pre-Wedding</a></li>
+        <li><a href="/weddings-receptions/">Wedding &amp; Reception</a></li>
+        <li><a href="/celebrity-clients/">Celebrity Clients</a></li>
+        <li><a href="/brand-ads-cinema-events/">Brand Ads &amp; Cinema Events</a></li>
+      </ul>
+    </details>
+  </nav>
+</footer>
 
 </body>
 </html>
